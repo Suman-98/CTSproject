@@ -1,0 +1,239 @@
+12:51:34.213 [pool-1-thread-1] INFO  TestLoginLogout - ******STARTING TEST LOGIN LOGOUT******
+12:51:34.226 [pool-1-thread-1] INFO  TestLoginLogout - Starting QA site validation
+12:51:37.521 [pool-1-thread-1] INFO  TestLoginLogout - QA site launch is successful
+12:51:54.282 [pool-1-thread-1] INFO  TestLoginLogout - Pop up closed
+12:52:11.901 [pool-1-thread-1] INFO  TestLoginLogout - Menu button clicked
+12:52:29.982 [pool-1-thread-1] INFO  TestLoginLogout - Login option selected
+12:52:57.347 [pool-1-thread-1] INFO  TestLoginLogout - User name entered
+12:53:25.600 [pool-1-thread-1] INFO  TestLoginLogout - Password entered
+12:53:40.090 [pool-1-thread-1] INFO  TestLoginLogout - Sign in button clicked
+12:54:02.639 [pool-1-thread-1] INFO  TestLoginLogout - Menu button clicked
+12:54:15.406 [pool-1-thread-1] INFO  TestLoginLogout - Logout button clicked
+12:54:19.346 [pool-1-thread-1] INFO  TestLoginLogout - Login header displayed
+15:04:07.504 [pool-1-thread-1] INFO  TestLoginLogout - ******STARTING TEST LOGIN LOGOUT******
+15:04:07.524 [pool-1-thread-1] INFO  TestLoginLogout - Starting QA site validation
+15:04:09.103 [pool-1-thread-1] INFO  TestLoginLogout - QA site launch is successful
+15:04:13.842 [pool-1-thread-1] INFO  TestLoginLogout - Pop up closed
+15:04:19.721 [pool-1-thread-1] INFO  TestLoginLogout - Menu button clicked
+15:04:25.787 [pool-1-thread-1] INFO  TestLoginLogout - Login option selected
+15:04:34.491 [pool-1-thread-1] INFO  TestLoginLogout - User name entered
+15:04:44.501 [pool-1-thread-1] INFO  TestLoginLogout - Password entered
+15:04:48.188 [pool-1-thread-1] INFO  TestLoginLogout - Sign in button clicked
+15:05:01.824 [pool-1-thread-1] INFO  TestLoginLogout - Menu button clicked
+15:05:05.801 [pool-1-thread-1] INFO  TestLoginLogout - Logout button clicked
+15:05:09.078 [pool-1-thread-1] INFO  TestLoginLogout - Login header displayed
+15:41:50.910 [main] INFO  TestLoginLogoutIOS - ******STARTING TEST LOGIN LOGOUT IN IOS DEVICE******
+15:41:50.961 [main] INFO  TestLoginLogoutIOS - Starting QA site validation
+15:42:06.966 [main] ERROR TestLoginLogoutIOS - QA site launch failed
+15:42:06.966 [main] ERROR TestLoginLogoutIOS - Expected condition failed: waiting for presence of element located by: By.className: close-btn (tried for 15 second(s) with 500 milliseconds interval)
+15:43:59.354 [main] INFO  TestLoginLogoutIOS - ******STARTING TEST LOGIN LOGOUT IN IOS DEVICE******
+15:43:59.400 [main] INFO  TestLoginLogoutIOS - Starting QA site validation
+15:44:25.252 [main] ERROR TestLoginLogoutIOS - QA site launch failed
+15:44:25.253 [main] ERROR TestLoginLogoutIOS - Expected condition failed: waiting for presence of element located by: By.className: close-btn (tried for 15 second(s) with 500 milliseconds interval)
+15:49:23.865 [main] INFO  TestLoginLogoutIOS - ******STARTING TEST LOGIN LOGOUT IN IOS DEVICE******
+15:49:23.890 [main] INFO  TestLoginLogoutIOS - Starting QA site validation
+15:49:27.471 [main] INFO  TestLoginLogoutIOS - QA site launch is successful
+15:49:46.940 [main] INFO  TestLoginLogoutIOS - Pop up closed
+15:50:04.397 [main] INFO  TestLoginLogoutIOS - Menu button clicked
+15:50:22.011 [main] INFO  TestLoginLogoutIOS - Login option selected
+15:50:53.147 [main] INFO  TestLoginLogoutIOS - User name entered
+15:51:25.008 [main] INFO  TestLoginLogoutIOS - Password entered
+15:51:40.551 [main] INFO  TestLoginLogoutIOS - Sign in button clicked
+15:51:55.896 [main] ERROR TestLoginLogoutIOS - Menu button click failed
+15:51:55.897 [main] ERROR TestLoginLogoutIOS - Expected condition failed: waiting for element to be clickable: By.xpath: //*[@id='header-container']/a[3] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LTIN213319', ip: '192.168.29.192', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: io.appium.java_client.ios.IOSDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, automationName: XCUITest, browserName: Safari, cloudViewLink: https://au-1.seetest.io:443..., commandTimeouts: 120000, desired: {browserName: Safari, deviceQuery: @os='ios' and @version='14...., platformName: iOS, testName: Quick Start iOS Browser Demo}, device.category: PHONE, device.majorVersion: 14, device.manufacture: Apple, device.model: iPhone 8, device.name: iPhone 8 IO-AU 08, device.os: iOS, device.screenSize: 750x1334, device.serialNumber: 9e4bcdc00b8fd59f13e859b6fd2..., device.version: 14.4, deviceQuery: @os='ios' and @version='14...., deviceUDID: 9e4bcdc00b8fd59f13e859b6fd2..., dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-5937317, ehmUrl: https://au-1.seetest.io:443..., fullReset: false, gridNodePort: 7778, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: IOS, platformName: iOS, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 922.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start iOS Browser Demo, udid: 9e4bcdc00b8fd59f13e859b6fd2..., useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-17_06-18-14-84edd130-91b6-4ef5-b79d-bf34e6f7c664
+16:38:03.471 [main] INFO  TestLoginLogoutIOS - ******STARTING TEST LOGIN LOGOUT IN IOS DEVICE******
+16:38:03.532 [main] INFO  TestLoginLogoutIOS - Starting QA site validation
+16:38:36.967 [main] ERROR TestLoginLogoutIOS - QA site launch failed
+16:38:36.968 [main] ERROR TestLoginLogoutIOS - Expected condition failed: waiting for presence of element located by: By.className: close-btn (tried for 25 second(s) with 500 milliseconds interval)
+16:43:17.739 [main] INFO  TestLoginLogoutIOS - ******STARTING TEST LOGIN LOGOUT IN IOS DEVICE******
+16:43:17.772 [main] INFO  TestLoginLogoutIOS - Starting QA site validation
+16:43:55.398 [main] ERROR TestLoginLogoutIOS - QA site launch failed
+16:43:55.398 [main] ERROR TestLoginLogoutIOS - Expected condition failed: waiting for presence of element located by: By.className: close-btn (tried for 20 second(s) with 500 milliseconds interval)
+16:48:18.865 [main] INFO  TestLoginLogoutIOS - ******STARTING TEST LOGIN LOGOUT IN IOS DEVICE******
+16:48:18.919 [main] INFO  TestLoginLogoutIOS - Starting QA site validation
+16:48:42.458 [main] ERROR TestLoginLogoutIOS - QA site launch failed
+16:48:42.458 [main] ERROR TestLoginLogoutIOS - Expected condition failed: waiting for presence of element located by: By.className: close-btn (tried for 20 second(s) with 500 milliseconds interval)
+17:06:15.819 [main] INFO  TestLoggedInOrder - ******STARTING TEST LOGGED IN ORDER******
+17:06:15.875 [main] INFO  TestLoggedInOrder - Starting QA site validation
+17:06:19.405 [main] INFO  TestLoggedInOrder - QA site launch is successful
+17:06:35.749 [main] INFO  TestLoggedInOrder - Pop up closed
+17:06:52.856 [main] INFO  TestLoggedInOrder - Menu button clicked
+17:07:11.796 [main] INFO  TestLoggedInOrder - Login option selected
+17:07:39.442 [main] INFO  TestLoggedInOrder - User name entered
+17:08:06.036 [main] INFO  TestLoggedInOrder - Password entered
+17:08:18.969 [main] INFO  TestLoggedInOrder - Sign in button clicked
+17:08:44.568 [main] INFO  TestLoggedInOrder - Menu button clicked
+17:09:01.362 [main] INFO  TestLoggedInOrder - Location option selected
+17:09:23.481 [main] INFO  TestLoggedInOrder - Restaurant location entered
+17:09:39.621 [main] INFO  TestLoggedInOrder - Search button clicked
+17:09:55.635 [main] INFO  TestLoggedInOrder - Site scrolled and order button clicked
+18:49:24.396 [main] INFO  TestLoggedInOrder - ******STARTING TEST LOGGED IN ORDER******
+18:49:24.427 [main] INFO  TestLoggedInOrder - Starting QA site validation
+18:49:27.754 [main] INFO  TestLoggedInOrder - QA site launch is successful
+18:49:43.882 [main] INFO  TestLoggedInOrder - Pop up closed
+18:50:00.677 [main] INFO  TestLoggedInOrder - Menu button clicked
+18:50:16.459 [main] INFO  TestLoggedInOrder - Login option selected
+18:50:43.845 [main] INFO  TestLoggedInOrder - User name entered
+18:51:10.320 [main] INFO  TestLoggedInOrder - Password entered
+18:51:22.530 [main] INFO  TestLoggedInOrder - Sign in button clicked
+18:51:46.814 [main] INFO  TestLoggedInOrder - Menu button clicked
+18:52:02.894 [main] INFO  TestLoggedInOrder - Location option selected
+18:52:24.131 [main] INFO  TestLoggedInOrder - Restaurant location entered
+18:52:39.792 [main] INFO  TestLoggedInOrder - Search button clicked
+18:52:55.792 [main] INFO  TestLoggedInOrder - Site scrolled and order button clicked
+18:53:08.808 [main] INFO  TestLoggedInOrder - Chilis favourite Item selected
+18:53:42.594 [main] INFO  TestLoggedInOrder - View Cart clicked
+18:54:09.200 [main] ERROR TestLoggedInOrder - Silver ware opt in failed
+18:54:09.200 [main] ERROR TestLoggedInOrder - Expected condition failed: waiting for element to be clickable: By.xpath: //label[@for='silverware-opt-in-select'] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LTIN213319', ip: '192.168.29.192', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://au-1.seetest.io:443..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 10, device.manufacture: OnePlus, device.model: ONEPLUS A6000, device.name: OnePlus IO-AU 07, device.os: Android, device.screenSize: 1080x2280, device.serialNumber: d379ba1e, device.version: 10, deviceQuery: @os='android' and @version=..., deviceUDID: d379ba1e, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-5937317, ehmUrl: https://au-1.seetest.io:443..., fullReset: false, gridNodePort: 7796, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 930.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: d379ba1e, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-17_09-18-25-2ba36f4a-0a40-4200-8d67-0aacacd8fd8a
+18:54:26.585 [main] INFO  TestLoggedInOrder - Order checked Out
+18:54:52.222 [main] INFO  TestLoggedInOrder - Payment button clicked
+18:55:22.006 [main] INFO  TestLoggedInOrder - CVV entered
+18:55:49.294 [main] INFO  TestLoggedInOrder - Tip given
+18:56:02.847 [main] INFO  TestLoggedInOrder - Donation checked
+18:56:05.494 [main] INFO  TestLoggedInOrder - Pick up cost displayed
+18:56:22.659 [main] INFO  TestLoggedInOrder - Place order button clicked
+18:56:39.336 [main] INFO  TestLoggedInOrder - Success message displayed
+18:56:48.349 [main] INFO  TestLoggedInOrder - Order price displayed
+19:13:02.057 [main] INFO  TestLoggedInOrder - ******STARTING TEST LOGGED IN ORDER******
+19:13:02.072 [main] INFO  TestLoggedInOrder - Starting QA site validation
+19:13:05.227 [main] INFO  TestLoggedInOrder - QA site launch is successful
+19:13:20.912 [main] INFO  TestLoggedInOrder - Pop up closed
+19:13:36.345 [main] INFO  TestLoggedInOrder - Menu button clicked
+19:13:51.754 [main] INFO  TestLoggedInOrder - Login option selected
+19:14:17.986 [main] INFO  TestLoggedInOrder - User name entered
+19:14:45.360 [main] INFO  TestLoggedInOrder - Password entered
+19:14:57.561 [main] INFO  TestLoggedInOrder - Sign in button clicked
+19:15:21.300 [main] INFO  TestLoggedInOrder - Menu button clicked
+19:15:36.862 [main] INFO  TestLoggedInOrder - Location option selected
+19:15:57.458 [main] INFO  TestLoggedInOrder - Restaurant location entered
+19:16:14.168 [main] INFO  TestLoggedInOrder - Search button clicked
+19:16:30.250 [main] INFO  TestLoggedInOrder - Site scrolled and order button clicked
+19:16:44.610 [main] INFO  TestLoggedInOrder - Chilis favourite Item selected
+19:17:19.554 [main] INFO  TestLoggedInOrder - View Cart clicked
+19:17:51.010 [main] ERROR TestLoggedInOrder - Silver ware opt in failed
+19:17:51.011 [main] ERROR TestLoggedInOrder - Expected condition failed: waiting for element to be clickable: By.xpath: //label[@for='silverware-opt-in-select'] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LTIN213319', ip: '192.168.29.192', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://au-1.seetest.io:443..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 10, device.manufacture: OnePlus, device.model: ONEPLUS A6000, device.name: OnePlus IO-AU 07, device.os: Android, device.screenSize: 1080x2280, device.serialNumber: d379ba1e, device.version: 10, deviceQuery: @os='android' and @version=..., deviceUDID: d379ba1e, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-5937317, ehmUrl: https://au-1.seetest.io:443..., fullReset: false, gridNodePort: 7799, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 931.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: d379ba1e, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-17_09-41-59-32628e9c-b313-4ee5-a184-e73997daf1a5
+19:18:09.871 [main] INFO  TestLoggedInOrder - Order checked Out
+19:18:32.857 [main] INFO  TestLoggedInOrder - Payment button clicked
+19:19:02.885 [main] INFO  TestLoggedInOrder - CVV entered
+19:19:28.766 [main] INFO  TestLoggedInOrder - Tip given
+19:19:42.656 [main] INFO  TestLoggedInOrder - Donation checked
+19:19:45.216 [main] INFO  TestLoggedInOrder - Pick up cost displayed
+19:20:02.378 [main] INFO  TestLoggedInOrder - Place order button clicked
+19:20:17.353 [main] INFO  TestLoggedInOrder - Success message displayed
+19:20:27.072 [main] INFO  TestLoggedInOrder - Order price displayed
+19:24:49.089 [main] INFO  TestLoggedInOrder - ******STARTING TEST LOGGED IN ORDER******
+19:24:49.104 [main] INFO  TestLoggedInOrder - Starting QA site validation
+19:24:52.257 [main] INFO  TestLoggedInOrder - QA site launch is successful
+19:25:09.444 [main] INFO  TestLoggedInOrder - Pop up closed
+19:25:24.999 [main] INFO  TestLoggedInOrder - Menu button clicked
+19:25:40.331 [main] INFO  TestLoggedInOrder - Login option selected
+19:26:05.887 [main] INFO  TestLoggedInOrder - User name entered
+19:26:31.497 [main] INFO  TestLoggedInOrder - Password entered
+19:26:43.776 [main] INFO  TestLoggedInOrder - Sign in button clicked
+19:27:06.923 [main] INFO  TestLoggedInOrder - Menu button clicked
+19:27:23.062 [main] INFO  TestLoggedInOrder - Location option selected
+19:27:43.867 [main] INFO  TestLoggedInOrder - Restaurant location entered
+19:27:59.305 [main] INFO  TestLoggedInOrder - Search button clicked
+19:28:15.613 [main] INFO  TestLoggedInOrder - Site scrolled and order button clicked
+19:28:29.851 [main] INFO  TestLoggedInOrder - Chilis favourite Item selected
+19:29:02.679 [main] INFO  TestLoggedInOrder - View Cart clicked
+19:29:26.273 [main] INFO  TestLoggedInOrder - Silver ware opted in
+19:29:44.116 [main] INFO  TestLoggedInOrder - Order checked Out
+19:30:07.792 [main] INFO  TestLoggedInOrder - Payment button clicked
+19:30:39.032 [main] INFO  TestLoggedInOrder - CVV entered
+19:31:07.009 [main] INFO  TestLoggedInOrder - Tip given
+19:31:19.728 [main] INFO  TestLoggedInOrder - Donation checked
+19:31:22.356 [main] INFO  TestLoggedInOrder - Pick up cost displayed
+19:31:40.000 [main] INFO  TestLoggedInOrder - Place order button clicked
+19:31:56.324 [main] INFO  TestLoggedInOrder - Success message displayed
+19:32:06.105 [main] INFO  TestLoggedInOrder - Order price displayed
+23:14:47.030 [main] INFO  TestLoginLogoutIOS - ******STARTING TEST LOGIN LOGOUT IN IOS DEVICE******
+23:14:47.046 [main] INFO  TestLoginLogoutIOS - Starting QA site validation
+23:14:50.924 [main] INFO  TestLoginLogoutIOS - QA site launch is successful
+23:15:08.538 [main] INFO  TestLoginLogoutIOS - Pop up closed
+23:15:25.948 [main] INFO  TestLoginLogoutIOS - Menu button clicked
+23:15:42.455 [main] INFO  TestLoginLogoutIOS - Login option selected
+23:16:13.294 [main] INFO  TestLoginLogoutIOS - User name entered
+23:16:44.295 [main] INFO  TestLoginLogoutIOS - Password entered
+23:16:58.999 [main] INFO  TestLoginLogoutIOS - Sign in button clicked
+23:17:22.083 [main] ERROR TestLoginLogoutIOS - Menu button click failed
+23:17:22.083 [main] ERROR TestLoginLogoutIOS - Expected condition failed: waiting for element to be clickable: By.xpath: //*[@id='header-container']/a[3] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LTIN213319', ip: '192.168.29.192', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: io.appium.java_client.ios.IOSDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, automationName: XCUITest, browserName: Safari, cloudViewLink: https://au-1.seetest.io:443..., commandTimeouts: 120000, desired: {browserName: Safari, deviceQuery: @os='ios' and @version='14...., platformName: iOS, testName: Quick Start iOS Browser Demo}, device.category: PHONE, device.majorVersion: 14, device.manufacture: Apple, device.model: iPhone 8, device.name: iPhone 8 IO-AU 08, device.os: iOS, device.screenSize: 750x1334, device.serialNumber: 9e4bcdc00b8fd59f13e859b6fd2..., device.version: 14.4, deviceQuery: @os='ios' and @version='14...., deviceUDID: 9e4bcdc00b8fd59f13e859b6fd2..., dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-5937317, ehmUrl: https://au-1.seetest.io:443..., fullReset: false, gridNodePort: 7806, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: IOS, platformName: iOS, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 934.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start iOS Browser Demo, udid: 9e4bcdc00b8fd59f13e859b6fd2..., useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-17_13-43-35-a636c0c5-bab6-4cfc-b849-b54e93066e9f
+23:32:51.485 [main] INFO  TestLoginLogoutIOS - ******STARTING TEST LOGIN LOGOUT IN IOS DEVICE******
+23:32:51.516 [main] INFO  TestLoginLogoutIOS - Starting QA site validation
+23:32:55.031 [main] INFO  TestLoginLogoutIOS - QA site launch is successful
+23:33:12.789 [main] INFO  TestLoginLogoutIOS - Pop up closed
+23:33:30.706 [main] INFO  TestLoginLogoutIOS - Menu button clicked
+23:33:48.222 [main] INFO  TestLoginLogoutIOS - Login option selected
+23:34:20.896 [main] INFO  TestLoginLogoutIOS - User name entered
+23:34:53.969 [main] INFO  TestLoginLogoutIOS - Password entered
+23:35:09.157 [main] INFO  TestLoginLogoutIOS - Sign in button clicked
+23:35:31.542 [main] INFO  TestLoginLogoutIOS - Menu button clicked
+23:35:45.993 [main] INFO  TestLoginLogoutIOS - Logout button clicked
+23:35:49.669 [main] INFO  TestLoginLogoutIOS - Login header displayed
+23:37:54.535 [main] INFO  TestFavouriteItems - ******STARTING TEST CHILIS FAVOURITE ITEMS FOR IOS DEVICE******
+23:37:54.567 [main] INFO  TestFavouriteItems - Starting QA site validation
+23:38:18.568 [main] ERROR TestFavouriteItems - QA site launch failed
+23:38:18.568 [main] ERROR TestFavouriteItems - Expected condition failed: waiting for presence of element located by: By.className: close-btn (tried for 20 second(s) with 500 milliseconds interval)
+23:41:03.214 [main] INFO  TestFavouriteItems - ******STARTING TEST CHILIS FAVOURITE ITEMS FOR IOS DEVICE******
+23:41:03.278 [main] INFO  TestFavouriteItems - Starting QA site validation
+23:41:07.443 [main] INFO  TestFavouriteItems - QA site launch is successful
+23:41:25.656 [main] INFO  TestFavouriteItems - Pop up closed
+23:41:43.344 [main] INFO  TestFavouriteItems - Menu button clicked
+23:42:00.969 [main] INFO  TestFavouriteItems - Login option selected
+23:42:32.402 [main] INFO  TestFavouriteItems - User name entered
+23:43:04.236 [main] INFO  TestFavouriteItems - Password entered
+23:43:18.550 [main] INFO  TestFavouriteItems - Sign in button clicked
+23:43:41.721 [main] INFO  TestFavouriteItems - Menu button clicked
+23:43:59.940 [main] INFO  TestFavouriteItems - Menu Option selected
+23:44:42.351 [main] INFO  TestFavouriteItems - All chilis favourite items obtained
+23:46:43.311 [main] INFO  TestUpdateAccount - ******STARTING TEST UPDATE MY ACCOUNT IN IOS DEVICE******
+23:46:43.331 [main] INFO  TestUpdateAccount - Starting QA site validation
+23:47:06.305 [main] ERROR TestUpdateAccount - QA site launch failed
+23:47:06.305 [main] ERROR TestUpdateAccount - Expected condition failed: waiting for presence of element located by: By.className: close-btn (tried for 20 second(s) with 500 milliseconds interval)
+23:48:41.717 [main] INFO  TestUpdateAccount - ******STARTING TEST UPDATE MY ACCOUNT IN IOS DEVICE******
+23:48:41.748 [main] INFO  TestUpdateAccount - Starting QA site validation
+23:48:45.274 [main] INFO  TestUpdateAccount - QA site launch is successful
+23:49:02.746 [main] INFO  TestUpdateAccount - Pop up closed
+23:49:19.857 [main] INFO  TestUpdateAccount - Menu button clicked
+23:49:38.356 [main] INFO  TestUpdateAccount - Login option selected
+23:50:08.687 [main] INFO  TestUpdateAccount - User name entered
+23:50:41.056 [main] INFO  TestUpdateAccount - Password entered
+23:50:55.701 [main] INFO  TestUpdateAccount - Sign in button clicked
+23:51:18.229 [main] INFO  TestUpdateAccount - Menu button clicked
+23:51:35.843 [main] INFO  TestUpdateAccount - My Account option selected
+23:52:09.813 [main] INFO  TestUpdateAccount - Last Name updated
+23:52:41.983 [main] INFO  TestUpdateAccount - Email updated
+23:53:02.679 [main] INFO  TestUpdateAccount - Consent checked
+23:53:16.439 [main] INFO  TestUpdateAccount - Update button clicked
+23:53:24.587 [main] INFO  TestUpdateAccount - Success message obtained
+23:56:03.839 [main] INFO  TestRewardsIOS - ******STARTING TEST REWARDS IN IOS DEVICE******
+23:56:03.880 [main] INFO  TestRewardsIOS - Starting QA site validation
+23:56:07.530 [main] INFO  TestRewardsIOS - QA site launch is successful
+23:56:26.458 [main] INFO  TestRewardsIOS - Pop up closed
+23:56:44.085 [main] INFO  TestRewardsIOS - Menu button clicked
+23:57:01.172 [main] INFO  TestRewardsIOS - Login option selected
+23:57:34.038 [main] INFO  TestRewardsIOS - User name entered
+23:58:05.165 [main] INFO  TestRewardsIOS - Password entered
+23:58:20.529 [main] INFO  TestRewardsIOS - Sign in button clicked
+23:58:30.464 [main] INFO  TestRewardsIOS - Displayed rewards count obtained
+23:58:42.350 [main] INFO  TestRewardsIOS - Actual rewards count obtained

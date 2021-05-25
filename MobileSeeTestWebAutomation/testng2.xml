@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<listeners>
+<listener class-name="Resources.Listener"/>
+</listeners>
+  <test name="Parallel Test" parallel="classes" thread-count="2">
+    <classes>
+      <class name="AndroidTwo.AndroidTwo.TestLoginLogout"/>
+      <class name="AndroidTwo.AndroidTwo.TestFavouriteItems"/>
+    </classes>
+    </test>
+</suite> <!-- Suite -->

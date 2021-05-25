@@ -1,0 +1,59 @@
+10:30:01.620 [main] INFO  TestLoggedInOrder - ******STARTING TEST LOGGED IN ORDER******
+10:30:01.669 [main] INFO  TestLoggedInOrder - Starting QA site validation
+10:30:23.646 [main] ERROR TestLoggedInOrder - QA site launch failed
+10:30:23.646 [main] ERROR TestLoggedInOrder - Expected condition failed: waiting for presence of element located by: By.className: close-btn (tried for 15 second(s) with 500 milliseconds interval)
+10:33:25.772 [main] INFO  TestLoggedInOrder - ******STARTING TEST LOGGED IN ORDER******
+10:33:25.788 [main] INFO  TestLoggedInOrder - Starting QA site validation
+10:33:27.310 [main] INFO  TestLoggedInOrder - QA site launch is successful
+10:33:45.202 [main] ERROR TestLoggedInOrder - Pop up close failed
+10:33:45.202 [main] ERROR TestLoggedInOrder - Expected condition failed: waiting for element to be clickable: By.className: close-btn (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LTIN213319', ip: '192.168.43.192', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://de-1.seetest.io:443..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 10, device.manufacture: HUAWEI, device.model: ELE-L29, device.name: Huawei P30 Pro IO-DE 25, device.os: Android, device.screenSize: 1080x2340, device.serialNumber: XPHDU20218002330, device.version: 10, deviceQuery: @os='android' and @version=..., deviceUDID: XPHDU20218002330, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-10326443, ehmUrl: https://de-1.seetest.io:443..., fullReset: false, gridNodePort: 7811, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 964.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: XPHDU20218002330, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-24_01-02-34-228a697f-7db0-49a1-a23e-598556b1f450
+10:36:16.613 [main] INFO  TestLoggedInOrder - ******STARTING TEST LOGGED IN ORDER******
+10:36:16.657 [main] INFO  TestLoggedInOrder - Starting QA site validation
+10:36:18.105 [main] INFO  TestLoggedInOrder - QA site launch is successful
+10:36:23.497 [main] INFO  TestLoggedInOrder - Pop up closed
+10:36:29.531 [main] INFO  TestLoggedInOrder - Menu button clicked
+10:36:35.407 [main] INFO  TestLoggedInOrder - Login option selected
+10:36:44.886 [main] INFO  TestLoggedInOrder - User name entered
+10:36:55.322 [main] INFO  TestLoggedInOrder - Password entered
+10:36:59.725 [main] INFO  TestLoggedInOrder - Sign in button clicked
+10:37:13.865 [main] INFO  TestLoggedInOrder - Menu button clicked
+10:37:20.211 [main] INFO  TestLoggedInOrder - Location option selected
+10:37:31.066 [main] INFO  TestLoggedInOrder - Restaurant location entered
+10:37:38.229 [main] INFO  TestLoggedInOrder - Search button clicked
+10:37:51.749 [main] INFO  TestLoggedInOrder - Site scrolled and order button clicked
+10:38:13.670 [main] ERROR TestLoggedInOrder - Failed to select chilis favourite item
+10:38:13.670 [main] ERROR TestLoggedInOrder - Expected condition failed: waiting for element to be clickable: By.xpath: //*[@id='P102596-0'] (tried for 15 second(s) with 500 milliseconds interval)
+11:21:51.959 [main] INFO  TestLoggedInOrder - ******STARTING TEST LOGGED IN ORDER******
+11:21:52.007 [main] INFO  TestLoggedInOrder - Starting QA site validation
+11:21:53.507 [main] INFO  TestLoggedInOrder - QA site launch is successful
+11:21:59.290 [main] INFO  TestLoggedInOrder - Pop up closed
+11:22:05.445 [main] INFO  TestLoggedInOrder - Menu button clicked
+11:22:11.565 [main] INFO  TestLoggedInOrder - Login option selected
+11:22:22.436 [main] INFO  TestLoggedInOrder - User name entered
+11:22:31.955 [main] INFO  TestLoggedInOrder - Password entered
+11:22:35.660 [main] INFO  TestLoggedInOrder - Sign in button clicked
+11:22:49.037 [main] INFO  TestLoggedInOrder - Menu button clicked
+11:22:55.193 [main] INFO  TestLoggedInOrder - Location option selected
+11:23:06.066 [main] INFO  TestLoggedInOrder - Restaurant location entered
+11:23:13.101 [main] INFO  TestLoggedInOrder - Search button clicked
+11:32:59.591 [main] INFO  TestLoggedInOrder - ******STARTING TEST LOGGED IN ORDER******
+11:32:59.622 [main] INFO  TestLoggedInOrder - Starting QA site validation
+11:33:01.405 [main] INFO  TestLoggedInOrder - QA site launch is successful
+11:33:06.509 [main] INFO  TestLoggedInOrder - Pop up closed
+11:33:12.956 [main] INFO  TestLoggedInOrder - Menu button clicked
+11:33:19.394 [main] INFO  TestLoggedInOrder - Login option selected
+11:33:29.027 [main] INFO  TestLoggedInOrder - User name entered
+11:33:37.417 [main] INFO  TestLoggedInOrder - Password entered
+11:33:41.317 [main] INFO  TestLoggedInOrder - Sign in button clicked
+11:33:54.628 [main] INFO  TestLoggedInOrder - Menu button clicked
+11:34:00.975 [main] INFO  TestLoggedInOrder - Location option selected
+11:34:12.440 [main] INFO  TestLoggedInOrder - Restaurant location entered
+11:34:20.428 [main] INFO  TestLoggedInOrder - Search button clicked
+11:38:49.417 [main] INFO  TestLoggedInOrder - Site scrolled and order button clicked
+11:39:13.315 [main] ERROR TestLoggedInOrder - Failed to select chilis favourite item
+11:39:13.319 [main] ERROR TestLoggedInOrder - Expected condition failed: waiting for element to be clickable: By.xpath: //*[@id='P102596-0'] (tried for 15 second(s) with 500 milliseconds interval)

@@ -1,0 +1,396 @@
+00:01:16.967 [main] INFO  TestLocationSearch - ******STARTING TEST LOCATION SEARCH IN IOS DEVICE******
+00:01:17.014 [main] INFO  TestLocationSearch - Starting QA site validation
+00:01:20.793 [main] INFO  TestLocationSearch - QA site launch is successful
+00:01:38.567 [main] INFO  TestLocationSearch - Pop up closed
+00:01:58.026 [main] INFO  TestLocationSearch - Menu button clicked
+00:02:15.699 [main] INFO  TestLocationSearch - Location option selected
+00:02:37.363 [main] INFO  TestLocationSearch - Restaurant location entered
+00:02:56.020 [main] INFO  TestLocationSearch - Search button clicked
+00:03:00.213 [main] INFO  TestLocationSearch - Restaurant name is displayed
+00:22:42.479 [main] INFO  TestReorder - ******STARTING TEST RE-ORDER******
+00:22:42.527 [main] INFO  TestReorder - Starting QA site validation
+00:22:46.860 [main] INFO  TestReorder - QA site launch is successful
+00:23:03.495 [main] INFO  TestReorder - Pop up closed
+00:23:19.490 [main] INFO  TestReorder - Menu button clicked
+00:23:36.084 [main] INFO  TestReorder - Login option selected
+00:24:03.113 [main] INFO  TestReorder - User name entered
+00:24:29.432 [main] INFO  TestReorder - Password entered
+00:24:43.056 [main] INFO  TestReorder - Sign in button clicked
+00:25:04.758 [main] INFO  TestReorder - Menu button clicked
+00:25:20.529 [main] INFO  TestReorder - Reorder option selected
+00:25:39.066 [main] INFO  TestReorder - Clicked reorder for a particular order
+00:26:05.721 [main] ERROR TestReorder - Failed to click quantity
+00:26:05.721 [main] ERROR TestReorder - Expected condition failed: waiting for element to be clickable: By.xpath: //*[@id='items0.quantity'] (tried for 15 second(s) with 500 milliseconds interval)
+00:35:15.413 [main] INFO  TestReorder - ******STARTING TEST RE-ORDER******
+00:35:15.438 [main] INFO  TestReorder - Starting QA site validation
+00:35:16.726 [main] INFO  TestReorder - QA site launch is successful
+00:35:21.248 [main] INFO  TestReorder - Pop up closed
+00:35:27.365 [main] INFO  TestReorder - Menu button clicked
+00:35:33.073 [main] INFO  TestReorder - Login option selected
+00:35:41.869 [main] INFO  TestReorder - User name entered
+00:35:50.363 [main] INFO  TestReorder - Password entered
+00:35:53.704 [main] INFO  TestReorder - Sign in button clicked
+00:36:06.861 [main] INFO  TestReorder - Menu button clicked
+00:36:12.644 [main] INFO  TestReorder - Reorder option selected
+00:36:31.458 [main] ERROR TestReorder - Failed to click reorder
+00:36:31.458 [main] ERROR TestReorder - Expected condition failed: waiting for element to be clickable: By.xpath: //div[contains(@class,'first-order')]/div[4]/div[2]/form/button (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LTIN213319', ip: '192.168.29.192', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://de-1.seetest.io:443..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 10, device.manufacture: HUAWEI, device.model: ELE-L29, device.name: Huawei P30 Pro IO-DE 25, device.os: Android, device.screenSize: 1080x2340, device.serialNumber: XPHDU20218002330, device.version: 10, deviceQuery: @os='android' and @version=..., deviceUDID: XPHDU20218002330, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-10326443, ehmUrl: https://de-1.seetest.io:443..., fullReset: false, gridNodePort: 7845, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 943.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: XPHDU20218002330, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-17_15-04-30-23230826-078d-4d67-9788-eded57b4ca87
+00:40:01.934 [main] INFO  TestReorder - ******STARTING TEST RE-ORDER******
+00:40:01.948 [main] INFO  TestReorder - Starting QA site validation
+00:40:03.361 [main] INFO  TestReorder - QA site launch is successful
+00:40:07.810 [main] INFO  TestReorder - Pop up closed
+00:40:13.399 [main] INFO  TestReorder - Menu button clicked
+00:40:19.182 [main] INFO  TestReorder - Login option selected
+00:40:27.722 [main] INFO  TestReorder - User name entered
+00:40:36.660 [main] INFO  TestReorder - Password entered
+00:40:39.979 [main] INFO  TestReorder - Sign in button clicked
+00:40:52.715 [main] INFO  TestReorder - Menu button clicked
+00:40:58.691 [main] INFO  TestReorder - Reorder option selected
+00:41:17.699 [main] ERROR TestReorder - Failed to click reorder
+00:41:17.700 [main] ERROR TestReorder - Expected condition failed: waiting for element to be clickable: By.xpath: //div[contains(@class,'first-order')]/div[4]/div[2]/form/button (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LTIN213319', ip: '192.168.29.192', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://de-1.seetest.io:443..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 10, device.manufacture: HUAWEI, device.model: ELE-L29, device.name: Huawei P30 Pro IO-DE 25, device.os: Android, device.screenSize: 1080x2340, device.serialNumber: XPHDU20218002330, device.version: 10, deviceQuery: @os='android' and @version=..., deviceUDID: XPHDU20218002330, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-10326443, ehmUrl: https://de-1.seetest.io:443..., fullReset: false, gridNodePort: 7846, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 944.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: XPHDU20218002330, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-17_15-09-17-a1e80f82-d981-4382-bd0b-3885e740700c
+00:44:06.531 [main] INFO  TestReorder - ******STARTING TEST RE-ORDER******
+00:44:06.546 [main] INFO  TestReorder - Starting QA site validation
+00:44:07.961 [main] INFO  TestReorder - QA site launch is successful
+00:44:12.435 [main] INFO  TestReorder - Pop up closed
+00:44:17.934 [main] INFO  TestReorder - Menu button clicked
+00:44:23.605 [main] INFO  TestReorder - Login option selected
+00:44:32.526 [main] INFO  TestReorder - User name entered
+00:44:41.613 [main] INFO  TestReorder - Password entered
+00:44:45.017 [main] INFO  TestReorder - Sign in button clicked
+00:44:56.887 [main] INFO  TestReorder - Menu button clicked
+00:45:02.976 [main] INFO  TestReorder - Reorder option selected
+00:45:10.444 [main] INFO  TestReorder - Clicked reorder for a particular order
+00:45:17.886 [main] INFO  TestReorder - Quantity clicked
+00:54:29.239 [main] INFO  TestReorder - ******STARTING TEST RE-ORDER******
+00:54:29.239 [main] INFO  TestReorder - Starting QA site validation
+00:54:30.541 [main] INFO  TestReorder - QA site launch is successful
+00:54:35.070 [main] INFO  TestReorder - Pop up closed
+00:54:41.242 [main] INFO  TestReorder - Menu button clicked
+00:54:47.267 [main] INFO  TestReorder - Login option selected
+00:54:56.046 [main] INFO  TestReorder - User name entered
+00:55:05.151 [main] INFO  TestReorder - Password entered
+00:55:08.667 [main] INFO  TestReorder - Sign in button clicked
+00:55:22.792 [main] INFO  TestReorder - Menu button clicked
+00:55:28.847 [main] INFO  TestReorder - Reorder option selected
+00:55:36.388 [main] INFO  TestReorder - Clicked reorder for a particular order
+00:56:02.428 [main] ERROR TestReorder - Failed to select and change quantity
+00:56:02.429 [main] ERROR TestReorder - Expected condition failed: waiting for element to be clickable: By.xpath: //select[@id='items0.quantity']/option[@value='4'] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LTIN213319', ip: '192.168.29.192', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://de-1.seetest.io:443..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 10, device.manufacture: HUAWEI, device.model: ELE-L29, device.name: Huawei P30 Pro IO-DE 25, device.os: Android, device.screenSize: 1080x2340, device.serialNumber: XPHDU20218002330, device.version: 10, deviceQuery: @os='android' and @version=..., deviceUDID: XPHDU20218002330, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-10326443, ehmUrl: https://de-1.seetest.io:443..., fullReset: false, gridNodePort: 7848, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 946.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: XPHDU20218002330, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-17_15-23-40-61b35a86-10fb-4970-b7eb-327b771402e6
+00:58:09.298 [main] INFO  TestReorder - ******STARTING TEST RE-ORDER******
+00:58:09.330 [main] INFO  TestReorder - Starting QA site validation
+00:58:10.734 [main] INFO  TestReorder - QA site launch is successful
+00:58:15.302 [main] INFO  TestReorder - Pop up closed
+00:58:21.219 [main] INFO  TestReorder - Menu button clicked
+00:58:27.255 [main] INFO  TestReorder - Login option selected
+00:58:36.216 [main] INFO  TestReorder - User name entered
+00:58:45.015 [main] INFO  TestReorder - Password entered
+00:58:48.486 [main] INFO  TestReorder - Sign in button clicked
+00:59:01.997 [main] INFO  TestReorder - Menu button clicked
+00:59:08.260 [main] INFO  TestReorder - Reorder option selected
+00:59:15.652 [main] INFO  TestReorder - Clicked reorder for a particular order
+00:59:41.517 [main] ERROR TestReorder - Failed to select and change quantity
+00:59:41.518 [main] ERROR TestReorder - Expected condition failed: waiting for element to be clickable: By.xpath: //*[text()='4'] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LTIN213319', ip: '192.168.29.192', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://de-1.seetest.io:443..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 10, device.manufacture: HUAWEI, device.model: ELE-L29, device.name: Huawei P30 Pro IO-DE 25, device.os: Android, device.screenSize: 1080x2340, device.serialNumber: XPHDU20218002330, device.version: 10, deviceQuery: @os='android' and @version=..., deviceUDID: XPHDU20218002330, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-10326443, ehmUrl: https://de-1.seetest.io:443..., fullReset: false, gridNodePort: 7849, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 947.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: XPHDU20218002330, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-17_15-27-20-c81ba35e-b4b8-4e06-9a7d-ae33588d463f
+01:04:33.511 [main] INFO  TestReorder - ******STARTING TEST RE-ORDER******
+01:04:33.518 [main] INFO  TestReorder - Starting QA site validation
+01:04:36.653 [main] INFO  TestReorder - QA site launch is successful
+01:04:53.041 [main] INFO  TestReorder - Pop up closed
+01:05:09.083 [main] INFO  TestReorder - Menu button clicked
+01:05:24.621 [main] INFO  TestReorder - Login option selected
+01:05:50.689 [main] INFO  TestReorder - User name entered
+01:06:17.164 [main] INFO  TestReorder - Password entered
+01:06:29.198 [main] INFO  TestReorder - Sign in button clicked
+01:06:53.463 [main] INFO  TestReorder - Menu button clicked
+01:07:09.745 [main] INFO  TestReorder - Reorder option selected
+01:07:27.713 [main] INFO  TestReorder - Clicked reorder for a particular order
+01:07:54.887 [main] INFO  TestReorder - Quantity changed
+01:12:17.131 [main] INFO  TestReorder - ******STARTING TEST RE-ORDER******
+01:12:17.137 [main] INFO  TestReorder - Starting QA site validation
+01:12:19.042 [main] INFO  TestReorder - QA site launch is successful
+01:12:24.648 [main] INFO  TestReorder - Pop up closed
+01:12:30.811 [main] INFO  TestReorder - Menu button clicked
+01:12:37.441 [main] INFO  TestReorder - Login option selected
+01:12:46.806 [main] INFO  TestReorder - User name entered
+01:12:55.267 [main] INFO  TestReorder - Password entered
+01:12:58.957 [main] INFO  TestReorder - Sign in button clicked
+01:13:13.299 [main] INFO  TestReorder - Menu button clicked
+01:13:19.353 [main] INFO  TestReorder - Reorder option selected
+01:13:26.863 [main] INFO  TestReorder - Clicked reorder for a particular order
+01:13:41.321 [main] INFO  TestReorder - Quantity changed
+01:21:35.904 [main] INFO  TestReorder - ******STARTING TEST RE-ORDER******
+01:21:35.927 [main] INFO  TestReorder - Starting QA site validation
+01:21:37.360 [main] INFO  TestReorder - QA site launch is successful
+01:21:41.886 [main] INFO  TestReorder - Pop up closed
+01:21:47.651 [main] INFO  TestReorder - Menu button clicked
+01:21:53.566 [main] INFO  TestReorder - Login option selected
+01:22:02.525 [main] INFO  TestReorder - User name entered
+01:22:11.846 [main] INFO  TestReorder - Password entered
+01:22:15.521 [main] INFO  TestReorder - Sign in button clicked
+01:22:29.478 [main] INFO  TestReorder - Menu button clicked
+01:22:35.547 [main] INFO  TestReorder - Reorder option selected
+01:22:43.006 [main] INFO  TestReorder - Clicked reorder for a particular order
+01:23:06.020 [main] ERROR TestReorder - Failed to select and change quantity
+01:23:06.020 [main] ERROR TestReorder - Expected condition failed: waiting for element to be clickable: By.xpath: //*[@id='items0.quantity'] (tried for 15 second(s) with 500 milliseconds interval)
+01:26:13.633 [main] INFO  TestReorder - ******STARTING TEST RE-ORDER******
+01:26:13.662 [main] INFO  TestReorder - Starting QA site validation
+01:26:15.004 [main] INFO  TestReorder - QA site launch is successful
+01:26:19.428 [main] INFO  TestReorder - Pop up closed
+01:26:25.680 [main] INFO  TestReorder - Menu button clicked
+01:26:31.330 [main] INFO  TestReorder - Login option selected
+01:26:39.960 [main] INFO  TestReorder - User name entered
+01:26:49.311 [main] INFO  TestReorder - Password entered
+01:26:52.761 [main] INFO  TestReorder - Sign in button clicked
+01:27:05.703 [main] INFO  TestReorder - Menu button clicked
+01:27:11.680 [main] INFO  TestReorder - Reorder option selected
+01:27:19.000 [main] INFO  TestReorder - Clicked reorder for a particular order
+01:27:44.710 [main] ERROR TestReorder - Failed to select and change quantity
+01:27:44.710 [main] ERROR TestReorder - Expected condition failed: waiting for element to be clickable: By.xpath: //*[@id='items0.quantity'] (tried for 15 second(s) with 500 milliseconds interval)
+01:32:42.017 [main] INFO  TestReorder - ******STARTING TEST RE-ORDER******
+01:32:42.041 [main] INFO  TestReorder - Starting QA site validation
+01:32:43.637 [main] INFO  TestReorder - QA site launch is successful
+01:32:48.265 [main] INFO  TestReorder - Pop up closed
+01:32:54.441 [main] INFO  TestReorder - Menu button clicked
+01:33:00.267 [main] INFO  TestReorder - Login option selected
+01:33:08.843 [main] INFO  TestReorder - User name entered
+01:33:18.355 [main] INFO  TestReorder - Password entered
+01:33:21.746 [main] INFO  TestReorder - Sign in button clicked
+01:33:35.250 [main] INFO  TestReorder - Menu button clicked
+01:33:41.760 [main] INFO  TestReorder - Reorder option selected
+01:33:49.276 [main] INFO  TestReorder - Clicked reorder for a particular order
+01:34:14.082 [main] ERROR TestReorder - Failed to enter Restaurant location
+01:34:14.083 [main] ERROR TestReorder - Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id='location-search'] (tried for 15 second(s) with 500 milliseconds interval)
+01:38:16.129 [main] INFO  TestReorder - ******STARTING TEST RE-ORDER******
+01:38:16.129 [main] INFO  TestReorder - Starting QA site validation
+01:38:17.360 [main] INFO  TestReorder - QA site launch is successful
+01:38:21.698 [main] INFO  TestReorder - Pop up closed
+01:38:27.483 [main] INFO  TestReorder - Menu button clicked
+01:38:33.439 [main] INFO  TestReorder - Login option selected
+01:38:42.398 [main] INFO  TestReorder - User name entered
+01:38:51.165 [main] INFO  TestReorder - Password entered
+01:38:54.461 [main] INFO  TestReorder - Sign in button clicked
+01:39:06.690 [main] INFO  TestReorder - Menu button clicked
+01:39:12.445 [main] INFO  TestReorder - Reorder option selected
+01:39:19.874 [main] INFO  TestReorder - Clicked reorder for a particular order
+01:39:35.208 [main] INFO  TestReorder - Quantity changed
+01:44:02.945 [main] INFO  TestReorder - ******STARTING TEST RE-ORDER******
+01:44:02.969 [main] INFO  TestReorder - Starting QA site validation
+01:44:04.315 [main] INFO  TestReorder - QA site launch is successful
+01:44:08.727 [main] INFO  TestReorder - Pop up closed
+01:44:14.773 [main] INFO  TestReorder - Menu button clicked
+01:44:20.748 [main] INFO  TestReorder - Login option selected
+01:44:29.124 [main] INFO  TestReorder - User name entered
+01:44:38.761 [main] INFO  TestReorder - Password entered
+01:44:42.240 [main] INFO  TestReorder - Sign in button clicked
+01:44:55.982 [main] INFO  TestReorder - Menu button clicked
+01:45:02.215 [main] INFO  TestReorder - Reorder option selected
+01:45:09.558 [main] INFO  TestReorder - Clicked reorder for a particular order
+01:45:22.547 [main] INFO  TestReorder - Quantity changed
+01:45:33.469 [main] INFO  TestReorder - Silver ware opted in
+01:45:39.536 [main] INFO  TestReorder - Order checked Out
+01:45:52.197 [main] INFO  TestReorder - Payment button clicked
+01:46:03.133 [main] INFO  TestReorder - CVV entered
+01:46:11.075 [main] INFO  TestReorder - Tip given
+01:46:14.585 [main] INFO  TestReorder - Donation checked
+01:46:15.559 [main] INFO  TestReorder - Pick up cost displayed
+01:46:34.144 [main] ERROR TestReorder - Failed to click place order button
+01:46:34.145 [main] ERROR TestReorder - Expected condition failed: waiting for element to be clickable: By.xpath: //*[@id='place-order-submit'] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LTIN213319', ip: '192.168.29.192', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://de-1.seetest.io:443..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 10, device.manufacture: HUAWEI, device.model: ELE-L29, device.name: Huawei P30 Pro IO-DE 25, device.os: Android, device.screenSize: 1080x2340, device.serialNumber: XPHDU20218002330, device.version: 10, deviceQuery: @os='android' and @version=..., deviceUDID: XPHDU20218002330, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-10326443, ehmUrl: https://de-1.seetest.io:443..., fullReset: false, gridNodePort: 7855, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 954.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: XPHDU20218002330, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-17_16-13-18-cc5e6f29-dca7-4652-a7b4-84ae3effdcf8
+01:50:33.658 [main] INFO  TestReorder - ******STARTING TEST RE-ORDER******
+01:50:33.674 [main] INFO  TestReorder - Starting QA site validation
+01:50:35.066 [main] INFO  TestReorder - QA site launch is successful
+01:50:40.026 [main] INFO  TestReorder - Pop up closed
+01:50:45.952 [main] INFO  TestReorder - Menu button clicked
+01:50:51.946 [main] INFO  TestReorder - Login option selected
+01:51:00.425 [main] INFO  TestReorder - User name entered
+01:51:09.120 [main] INFO  TestReorder - Password entered
+01:51:12.563 [main] INFO  TestReorder - Sign in button clicked
+01:51:24.724 [main] INFO  TestReorder - Menu button clicked
+01:51:30.419 [main] INFO  TestReorder - Reorder option selected
+01:51:37.787 [main] INFO  TestReorder - Clicked reorder for a particular order
+01:51:49.851 [main] INFO  TestReorder - Quantity changed
+01:52:00.506 [main] INFO  TestReorder - Silver ware opted in
+01:52:06.876 [main] INFO  TestReorder - Order checked Out
+01:52:19.989 [main] INFO  TestReorder - Payment button clicked
+01:52:31.360 [main] INFO  TestReorder - CVV entered
+01:52:40.357 [main] INFO  TestReorder - Tip given
+01:52:43.974 [main] INFO  TestReorder - Donation checked
+01:52:44.838 [main] INFO  TestReorder - Pick up cost displayed
+01:52:52.124 [main] INFO  TestReorder - Place order button clicked
+01:53:16.123 [main] ERROR TestReorder - Sucess message not displayed
+01:53:16.123 [main] ERROR TestReorder - Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id='page-container']/div/div[1]/div[1]/div/h1 (tried for 15 second(s) with 500 milliseconds interval)
+01:56:49.906 [main] INFO  TestReorder - ******STARTING TEST RE-ORDER******
+01:56:49.921 [main] INFO  TestReorder - Starting QA site validation
+01:56:51.345 [main] INFO  TestReorder - QA site launch is successful
+01:56:55.683 [main] INFO  TestReorder - Pop up closed
+01:57:01.678 [main] INFO  TestReorder - Menu button clicked
+01:57:07.347 [main] INFO  TestReorder - Login option selected
+01:57:15.879 [main] INFO  TestReorder - User name entered
+01:57:24.691 [main] INFO  TestReorder - Password entered
+01:57:28.037 [main] INFO  TestReorder - Sign in button clicked
+01:57:40.025 [main] INFO  TestReorder - Menu button clicked
+01:57:46.091 [main] INFO  TestReorder - Reorder option selected
+01:57:53.601 [main] INFO  TestReorder - Clicked reorder for a particular order
+01:58:05.390 [main] INFO  TestReorder - Quantity changed
+01:58:15.910 [main] INFO  TestReorder - Silver ware opted in
+01:58:22.113 [main] INFO  TestReorder - Order checked Out
+01:58:33.122 [main] INFO  TestReorder - Payment button clicked
+01:58:44.589 [main] INFO  TestReorder - CVV entered
+01:58:52.309 [main] INFO  TestReorder - Tip given
+01:58:55.889 [main] INFO  TestReorder - Donation checked
+01:58:57.001 [main] INFO  TestReorder - Pick up cost displayed
+01:59:04.082 [main] INFO  TestReorder - Place order button clicked
+01:59:19.995 [main] INFO  TestReorder - Success message displayed
+01:59:24.860 [main] INFO  TestReorder - Order price displayed
+02:03:04.287 [main] INFO  TestLoggedInOrder - ******STARTING TEST LOGGED IN ORDER******
+02:03:04.302 [main] INFO  TestLoggedInOrder - Starting QA site validation
+02:03:05.705 [main] INFO  TestLoggedInOrder - QA site launch is successful
+02:03:09.980 [main] INFO  TestLoggedInOrder - Pop up closed
+02:03:16.005 [main] INFO  TestLoggedInOrder - Menu button clicked
+02:03:21.849 [main] INFO  TestLoggedInOrder - Login option selected
+02:03:30.545 [main] INFO  TestLoggedInOrder - User name entered
+02:03:39.654 [main] INFO  TestLoggedInOrder - Password entered
+02:03:43.043 [main] INFO  TestLoggedInOrder - Sign in button clicked
+02:03:55.393 [main] INFO  TestLoggedInOrder - Menu button clicked
+02:04:01.323 [main] INFO  TestLoggedInOrder - Location option selected
+02:04:11.687 [main] INFO  TestLoggedInOrder - Restaurant location entered
+02:04:29.001 [main] ERROR TestLoggedInOrder - Search button click failed
+02:04:29.001 [main] ERROR TestLoggedInOrder - Expected condition failed: waiting for element to be clickable: By.xpath: //*[@id='button-location-query']/span (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LTIN213319', ip: '192.168.29.192', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://de-1.seetest.io:443..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 10, device.manufacture: HUAWEI, device.model: ELE-L29, device.name: Huawei P30 Pro IO-DE 25, device.os: Android, device.screenSize: 1080x2340, device.serialNumber: XPHDU20218002330, device.version: 10, deviceQuery: @os='android' and @version=..., deviceUDID: XPHDU20218002330, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-10326443, ehmUrl: https://de-1.seetest.io:443..., fullReset: false, gridNodePort: 7858, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 957.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: XPHDU20218002330, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-17_16-32-19-81b5a555-df89-4c6f-855d-db542915c4bd
+02:10:54.592 [main] INFO  TestLoggedInOrder - ******STARTING TEST LOGGED IN ORDER******
+02:10:54.630 [main] INFO  TestLoggedInOrder - Starting QA site validation
+02:10:56.034 [main] INFO  TestLoggedInOrder - QA site launch is successful
+02:11:00.605 [main] INFO  TestLoggedInOrder - Pop up closed
+02:11:06.394 [main] INFO  TestLoggedInOrder - Menu button clicked
+02:11:12.353 [main] INFO  TestLoggedInOrder - Login option selected
+02:11:20.905 [main] INFO  TestLoggedInOrder - User name entered
+02:11:29.983 [main] INFO  TestLoggedInOrder - Password entered
+02:11:33.349 [main] INFO  TestLoggedInOrder - Sign in button clicked
+02:11:47.100 [main] INFO  TestLoggedInOrder - Menu button clicked
+02:11:52.945 [main] INFO  TestLoggedInOrder - Location option selected
+02:12:03.609 [main] INFO  TestLoggedInOrder - Restaurant location entered
+02:12:20.583 [main] ERROR TestLoggedInOrder - Search button click failed
+02:12:20.584 [main] ERROR TestLoggedInOrder - Expected condition failed: waiting for element to be clickable: By.xpath: //*[@id='button-location-query']/span (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LTIN213319', ip: '192.168.29.192', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://de-1.seetest.io:443..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 10, device.manufacture: HUAWEI, device.model: ELE-L29, device.name: Huawei P30 Pro IO-DE 25, device.os: Android, device.screenSize: 1080x2340, device.serialNumber: XPHDU20218002330, device.version: 10, deviceQuery: @os='android' and @version=..., deviceUDID: XPHDU20218002330, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-10326443, ehmUrl: https://de-1.seetest.io:443..., fullReset: false, gridNodePort: 7859, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 958.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: XPHDU20218002330, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-17_16-40-09-fd3e50e4-7d46-4c77-a2ee-fff4ba06bab9
+02:16:35.595 [main] INFO  TestLoggedInOrder - ******STARTING TEST LOGGED IN ORDER******
+02:16:35.617 [main] INFO  TestLoggedInOrder - Starting QA site validation
+02:16:36.998 [main] INFO  TestLoggedInOrder - QA site launch is successful
+02:16:41.771 [main] INFO  TestLoggedInOrder - Pop up closed
+02:16:47.711 [main] INFO  TestLoggedInOrder - Menu button clicked
+02:16:53.589 [main] INFO  TestLoggedInOrder - Login option selected
+02:17:02.585 [main] INFO  TestLoggedInOrder - User name entered
+02:17:11.327 [main] INFO  TestLoggedInOrder - Password entered
+02:17:14.849 [main] INFO  TestLoggedInOrder - Sign in button clicked
+02:17:27.267 [main] INFO  TestLoggedInOrder - Menu button clicked
+02:17:33.299 [main] INFO  TestLoggedInOrder - Location option selected
+02:17:43.832 [main] INFO  TestLoggedInOrder - Restaurant location entered
+02:17:50.792 [main] INFO  TestLoggedInOrder - Search button clicked
+02:18:00.919 [main] INFO  TestLoggedInOrder - Site scrolled and order button clicked
+02:18:07.381 [main] INFO  TestLoggedInOrder - Chilis favourite Item selected
+02:18:22.019 [main] INFO  TestLoggedInOrder - View Cart clicked
+02:18:32.412 [main] INFO  TestLoggedInOrder - Silver ware opted in
+02:18:38.688 [main] INFO  TestLoggedInOrder - Order checked Out
+02:18:50.441 [main] INFO  TestLoggedInOrder - Payment button clicked
+02:19:02.866 [main] INFO  TestLoggedInOrder - CVV entered
+02:19:10.642 [main] INFO  TestLoggedInOrder - Tip given
+02:19:14.117 [main] INFO  TestLoggedInOrder - Donation checked
+02:19:14.929 [main] INFO  TestLoggedInOrder - Pick up cost displayed
+02:19:20.860 [main] INFO  TestLoggedInOrder - Place order button clicked
+02:19:34.598 [main] INFO  TestLoggedInOrder - Success message displayed
+02:19:39.196 [main] INFO  TestLoggedInOrder - Order price displayed
+02:25:06.533 [main] INFO  TestLoggedInOrder - ******STARTING TEST LOGGED IN ORDER IN IOS DEVICE******
+02:25:06.549 [main] INFO  TestLoggedInOrder - Starting QA site validation
+02:25:10.115 [main] INFO  TestLoggedInOrder - QA site launch is successful
+02:25:27.200 [main] INFO  TestLoggedInOrder - Pop up closed
+02:25:44.030 [main] INFO  TestLoggedInOrder - Menu button clicked
+02:26:01.360 [main] INFO  TestLoggedInOrder - Login option selected
+02:26:32.529 [main] INFO  TestLoggedInOrder - User name entered
+02:27:04.993 [main] INFO  TestLoggedInOrder - Password entered
+02:27:19.756 [main] INFO  TestLoggedInOrder - Sign in button clicked
+02:27:42.825 [main] INFO  TestLoggedInOrder - Menu button clicked
+02:27:59.946 [main] INFO  TestLoggedInOrder - Location option selected
+02:28:20.081 [main] INFO  TestLoggedInOrder - Restaurant location entered
+02:28:40.991 [main] INFO  TestLoggedInOrder - Search button clicked
+02:28:57.195 [main] INFO  TestLoggedInOrder - Site scrolled and order button clicked
+02:29:11.589 [main] INFO  TestLoggedInOrder - Chilis favourite Item selected
+02:29:47.586 [main] INFO  TestLoggedInOrder - View Cart clicked
+02:30:13.775 [main] INFO  TestLoggedInOrder - Silver ware opted in
+02:30:41.861 [main] ERROR TestLoggedInOrder - Order check out failed
+02:30:41.861 [main] ERROR TestLoggedInOrder - Expected condition failed: waiting for element to be clickable: By.xpath: //*[@id='cart-checkout'] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LTIN213319', ip: '192.168.29.192', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: io.appium.java_client.ios.IOSDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, automationName: XCUITest, browserName: Safari, cloudViewLink: https://au-1.seetest.io:443..., commandTimeouts: 120000, desired: {browserName: Safari, deviceQuery: @os='ios' and @version='14...., platformName: iOS, testName: Quick Start iOS Browser Demo}, device.category: PHONE, device.majorVersion: 14, device.manufacture: Apple, device.model: iPhone 8, device.name: iPhone 8 IO-AU 08, device.os: iOS, device.screenSize: 750x1334, device.serialNumber: 9e4bcdc00b8fd59f13e859b6fd2..., device.version: 14.4, deviceQuery: @os='ios' and @version='14...., deviceUDID: 9e4bcdc00b8fd59f13e859b6fd2..., dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-5937317, ehmUrl: https://au-1.seetest.io:443..., fullReset: false, gridNodePort: 7818, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: IOS, platformName: iOS, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 960.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start iOS Browser Demo, udid: 9e4bcdc00b8fd59f13e859b6fd2..., useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-17_16-53-53-39cd3cc6-0380-4161-b3d9-0afba63b0872
+02:37:28.662 [main] INFO  TestLoggedInOrderIOS - ******STARTING TEST LOGGED IN ORDER IN IOS DEVICE******
+02:37:28.694 [main] INFO  TestLoggedInOrderIOS - Starting QA site validation
+02:37:32.301 [main] INFO  TestLoggedInOrderIOS - QA site launch is successful
+02:37:49.229 [main] INFO  TestLoggedInOrderIOS - Pop up closed
+02:38:06.749 [main] INFO  TestLoggedInOrderIOS - Menu button clicked
+02:38:24.791 [main] INFO  TestLoggedInOrderIOS - Login option selected
+02:38:55.760 [main] INFO  TestLoggedInOrderIOS - User name entered
+02:39:28.046 [main] INFO  TestLoggedInOrderIOS - Password entered
+02:39:43.987 [main] INFO  TestLoggedInOrderIOS - Sign in button clicked
+02:40:06.510 [main] INFO  TestLoggedInOrderIOS - Menu button clicked
+02:40:23.841 [main] INFO  TestLoggedInOrderIOS - Location option selected
+02:40:44.940 [main] INFO  TestLoggedInOrderIOS - Restaurant location entered
+02:41:04.999 [main] INFO  TestLoggedInOrderIOS - Search button clicked
+02:41:21.820 [main] INFO  TestLoggedInOrderIOS - Site scrolled and order button clicked
+02:41:35.887 [main] INFO  TestLoggedInOrderIOS - Chilis favourite Item selected
+02:42:11.651 [main] INFO  TestLoggedInOrderIOS - View Cart clicked
+02:42:38.956 [main] INFO  TestLoggedInOrderIOS - Silver ware opted in
+02:43:07.743 [main] ERROR TestLoggedInOrderIOS - Order check out failed
+02:43:07.744 [main] ERROR TestLoggedInOrderIOS - Expected condition failed: waiting for element to be clickable: By.xpath: //*[@id='cart-checkout'] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LTIN213319', ip: '192.168.29.192', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: io.appium.java_client.ios.IOSDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, automationName: XCUITest, browserName: Safari, cloudViewLink: https://au-1.seetest.io:443..., commandTimeouts: 120000, desired: {browserName: Safari, deviceQuery: @os='ios' and @version='14...., platformName: iOS, testName: Quick Start iOS Browser Demo}, device.category: PHONE, device.majorVersion: 14, device.manufacture: Apple, device.model: iPhone 8, device.name: iPhone 8 IO-AU 08, device.os: iOS, device.screenSize: 750x1334, device.serialNumber: 9e4bcdc00b8fd59f13e859b6fd2..., device.version: 14.4, deviceQuery: @os='ios' and @version='14...., deviceUDID: 9e4bcdc00b8fd59f13e859b6fd2..., dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-5937317, ehmUrl: https://au-1.seetest.io:443..., fullReset: false, gridNodePort: 7819, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: IOS, platformName: iOS, projectName: , reportDirectory: reports, reportFormat: xml, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start iOS Browser Demo, udid: 9e4bcdc00b8fd59f13e859b6fd2..., useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-17_17-06-18-58a89394-abf9-4f60-ba66-7be285c979a6
+09:07:50.431 [main] INFO  TestLoggedInOrder - ******STARTING TEST LOGGED IN ORDER******
+09:07:50.455 [main] INFO  TestLoggedInOrder - Starting QA site validation
+09:07:51.699 [main] INFO  TestLoggedInOrder - QA site launch is successful
+09:07:56.215 [main] INFO  TestLoggedInOrder - Pop up closed
+09:08:02.191 [main] INFO  TestLoggedInOrder - Menu button clicked
+09:08:08.030 [main] INFO  TestLoggedInOrder - Login option selected
+09:08:16.152 [main] INFO  TestLoggedInOrder - User name entered
+09:08:25.222 [main] INFO  TestLoggedInOrder - Password entered
+09:08:28.714 [main] INFO  TestLoggedInOrder - Sign in button clicked
+09:08:39.581 [main] INFO  TestLoggedInOrder - Menu button clicked
+09:08:45.736 [main] INFO  TestLoggedInOrder - Location option selected
+09:08:56.016 [main] INFO  TestLoggedInOrder - Restaurant location entered
+09:09:02.871 [main] INFO  TestLoggedInOrder - Search button clicked
+09:09:13.073 [main] INFO  TestLoggedInOrder - Site scrolled and order button clicked
+09:09:20.006 [main] INFO  TestLoggedInOrder - Chilis favourite Item selected
+09:09:34.195 [main] INFO  TestLoggedInOrder - View Cart clicked
+09:09:45.420 [main] INFO  TestLoggedInOrder - Silver ware opted in
+09:09:51.500 [main] INFO  TestLoggedInOrder - Order checked Out
+09:10:22.370 [main] ERROR TestLoggedInOrder - Failed to click Payment button
+09:10:22.371 [main] ERROR TestLoggedInOrder - Expected condition failed: waiting for element to be clickable: By.xpath: //*[@id='continue-to-payment'] (tried for 15 second(s) with 500 milliseconds interval)

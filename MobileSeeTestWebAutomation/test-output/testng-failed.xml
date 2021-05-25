@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="Resources.Listener"/>
+  </listeners>
+  <test name="Test Login Logout(failed)">
+    <classes>
+      <class name="TestScripts.TestLoggedInOrder">
+        <methods>
+          <include name="testLoggedInOrderFeature"/>
+          <include name="initialize"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- TestScripts.TestLoggedInOrder -->
+    </classes>
+  </test> <!-- Test Login Logout(failed) -->
+</suite> <!-- Failed suite [Suite] -->
