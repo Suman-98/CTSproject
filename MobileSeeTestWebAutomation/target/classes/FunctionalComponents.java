@@ -93,6 +93,12 @@ public class FunctionalComponents extends Base {
 		js.executeScript("window.scrollBy(0,-" + endpoint + ")", "");
 	}
 	
+	public void scrollIntoView (By element) {
+		WebElement ele = driver.findElement(element);
+		((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", ele);
+		
+	}
+	
 	public void validateQASite() {
 		log.info("Starting QA site validation");
 		try {
@@ -540,8 +546,8 @@ public class FunctionalComponents extends Base {
 		return driver.findElement(Elements.getSuccessMessageforAddMyVisit).getText();
 
 	}
+	
 	// Logged In Order
-
 	public void enterRestaurantLocationForLoggedInOrder(String location) throws InterruptedException {
 
 		try {
@@ -644,7 +650,117 @@ public class FunctionalComponents extends Base {
 		}
 	}
 	
-	/*********************************************************suman**********************************************************/
+	/*********************************************************suman**********************************************************/	
+	
+	//chili's Menu
+	
+	public void clickOnAppetizer() {
+		
+		try {
+			scrollIntoView(Elements.appetizerButton);
+			clickableWait(Elements.appetizerButton);
+			log.info("Appetizer Menu button is clicked");
+		}catch (Exception e) {
+			log.error("Appetizer Menu button click failed");
+			log.error(e.getMessage());
+			listen.getErrorMessage(e.toString());
+			tearDown();
+		}
+	}
+	
+	public void clickOnChipsSalsa() {
+		
+		try {
+			scrollIntoView(Elements.chipsandsalsaButton);
+			clickableWait(Elements.chipsandsalsaButton);
+			log.info("Chips&Salsa menu button is clicked");
+		}catch (Exception e) {
+			log.error("Chips&Salsa menu button click failed");
+			log.error(e.getMessage());
+			listen.getErrorMessage(e.toString());
+			tearDown();
+		}
+		
+	}
+	
+	public void addToOrder() {
+		
+		try {
+			explicitWait(Elements.addToOrder);
+			clickElement(Elements.addToOrder);
+			log.info("AddToOrder button is clicked");
+		}catch (Exception e) {
+			log.error("AddToOrder button click failed");
+			log.error(e.getMessage());
+			listen.getErrorMessage(e.toString());
+			tearDown();
+		}
+	}
+	
+	
+	public void addRewards () {
+		
+		try {
+			clickableWait(Elements.addRewards);
+			log.info("Adding Rewards is sucesses");
+		}catch (Exception e) {
+			log.error("Adding Reward is failed");
+			log.error(e.getMessage());
+			listen.getErrorMessage(e.toString());
+			tearDown();
+		}
+	}
+	
+	
+	//Carry-out Order
+	
+	public void clickOnCarryOut() {
+		
+		try {
+			explicitWait(Elements.carryOutButton);
+			log.info("Carryout Button is Clicked");
+		}catch (Exception e) {
+			log.error("Carryout Button click failed");
+			log.error(e.getMessage());
+			listen.getErrorMessage(e.toString());
+			tearDown();
+		}
+		
+	}
+	
+	public void selectPickupLaterToday() {
+		try {
+			clickableWait(Elements.pickupTimetextbox1);
+			Thread.sleep(3000);
+			clickElement(Elements.pickupLaterToday);
+			log.info("Later Today pickup time is selected");
+		} catch (Exception e) {
+			log.error("Failed to select Later Today");
+			log.error(e.getMessage());
+			listen.getErrorMessage(e.toString());
+			tearDown();
+		}
+	}
+	
+	public void selectPickupTime() {
+		try {
+			clickableWait(Elements.pickupTimetextbox2);
+			Thread.sleep(3000);
+			clickElement(Elements.pickupTime);
+			log.info("Pickup time is selected");
+		} catch (Exception e) {
+			log.error("Failed to select pickup time");
+			log.error(e.getMessage());
+			listen.getErrorMessage(e.toString());
+			tearDown();
+		}
+	}
+	
+	
+	
+	
+
+	//Delivery Order
 	
 	public void clickDeliveryButton () {
 		
@@ -659,6 +775,7 @@ public class FunctionalComponents extends Base {
 		}
 	}
 	
+		
 	public void enterDeliveryLocation(String deliveryLocation) throws InterruptedException {
 		try {
 			clickableWait(Elements.deliveryLocation);
@@ -702,10 +819,11 @@ public class FunctionalComponents extends Base {
 	public void selectDeliveryASAP () {
 		try {
 			clickableWait(Elements.deliveryTimetextbox1);
-			clickElement(Elements.LaterToday);
-			log.info("Delivery Time Textbox1 is clicked");
+			Thread.sleep(3000);
+			clickElement(Elements.asapOrder);
+			log.info("ASAP delivery time is selected");
 		} catch (Exception e) {
-			log.error("Failed to click Delivery Time Textbox1");
+			log.error("Failed to select delivery time ASAP");
 			log.error(e.getMessage());
 			listen.getErrorMessage(e.toString());
 			tearDown();
@@ -715,10 +833,11 @@ public class FunctionalComponents extends Base {
 	public void selectDeliveryLaterToday() {
 		try {
 			clickableWait(Elements.deliveryTimetextbox1);
-			clickElement(Elements.asapOrder);
-			log.info("Delivery Time Textbox1 is clicked");
+			Thread.sleep(3000);
+			clickElement(Elements.LaterToday);
+			log.info("Later Today delivery time is selected");
 		} catch (Exception e) {
-			log.error("Failed to click Delivery Time Textbox1");
+			log.error("Failed to select delivery time Later Today");
 			log.error(e.getMessage());
 			listen.getErrorMessage(e.toString());
 			tearDown();
@@ -728,10 +847,11 @@ public class FunctionalComponents extends Base {
 	public void selectDeliveryTime() {
 		try {
 			clickableWait(Elements.deliveryTimetextbox2);
+			Thread.sleep(3000);
 			clickElement(Elements.dliveryTime);
-			log.info("Delivery Time Textbox1 is clicked");
+			log.info("Delivery Time  is selected");
 		} catch (Exception e) {
-			log.error("Failed to click Delivery Time Textbox1");
+			log.error("Failed to select Delivery Time");
 			log.error(e.getMessage());
 			listen.getErrorMessage(e.toString());
 			tearDown();
@@ -753,6 +873,26 @@ public class FunctionalComponents extends Base {
 		}
 		
 	}
+	
+	
+	public void isRewardApplied() {
+		
+		try {
+			driver.findElement(Elements.discount).isDisplayed();
+			log.info("Discount is applied");
+		} catch (Exception e) {
+			log.error("Applying discount is failed");
+			log.error(e.getMessage());
+			listen.getErrorMessage(e.toString());
+			tearDown();
+		}
+		
+		
+	}
+	
+	
+	
+	/*******************************************************************************************************************************/
 
 	public void continueToPayment() {
 		try {

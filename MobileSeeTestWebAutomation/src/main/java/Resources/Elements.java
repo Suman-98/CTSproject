@@ -94,6 +94,22 @@ public class Elements {
 	public static final By termsCheckbox=By.xpath("//input[@id='delivery-sms-disclaimer']");
 	public static final By asapOrder=By.xpath("(//option[contains(text(),'ASAP')] )[1]");
 	
+	//CarryOut Order
+	public static final By carryOutButton=By.xpath("//button[@id='order-type-carryout-btn']");
+	public static final By pickupTimetextbox1=By.xpath("//select[@id='pickup-date']");
+	public static final By pickupLaterToday=By.xpath("(//option[contains(text(),'Later Today')])[2]");
+	public static final By pickupTimetextbox2=By.xpath("//select[@id='pickup-time']");
+	public static final By pickupTime=By.xpath("(//option[contains(text(),'7:00 PM')])[2]");
+	public static final By discount=By.xpath("//div[contains(text(),'Discounts')]");
+	
+	
+	//Chili's Menu
+	public static final By appetizerButton=By.xpath("//a[@id='menu-category-name-appetizers']");
+	public static final By chipsandsalsaButton=By.xpath("//a[@id='menu-item-button-P101751']");
+	public static final By addToOrder=By.xpath("//button[@id='item-add-to-order']");
+	public static final By addRewards=By.xpath("//input[@id='member-reward-1']");
+	
+	
 	
 	//Re Order
 	public static final By reorderOption = By.xpath("//*[@id='header-order-history']");
