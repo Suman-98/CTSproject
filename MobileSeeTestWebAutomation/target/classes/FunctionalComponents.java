@@ -903,8 +903,12 @@ public class FunctionalComponents extends Base {
 	public void clickTermsCheckbox() {
 		
 		try {
-			clickElement(Elements.termsCheckbox);
-			log.info("Terms Checkbox  is Clicked");
+			WebElement checkbox=driver.findElement(Elements.termsCheckbox);
+			if(! checkbox.isSelected()) {
+				checkbox.click();
+				log.info("Terms Checkbox  is clicked");
+			}
+			log.info("Terms Checkbox  is already clicked");
 		} catch (Exception e) {
 			log.error("Terms Checkbox click failed");
 			log.error(e.getMessage());
