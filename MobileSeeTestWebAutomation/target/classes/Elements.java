@@ -79,6 +79,7 @@ public class Elements {
 	public static final By tipTextBox = By.xpath("//input[@name='tip']");
 	public static final By pickUpCost = By.xpath("//*[@id='pickup-cost']");
 	public static final By donationCheckBox = By.xpath("//*[@id='roundup-checkbox-online']");
+	public static final By donationCheckBoxPayLater = By.xpath("//*[@id='roundup-checkbox-online']");
 	public static final By locationHeader = By.xpath("//*[@id='page-container']/div/div[1]/div/div/div/div[1]/div/h1");
 	public static final By silverWareCheckBox = By.xpath("//*[@id='silverware-opt-in-select']");
 	
@@ -92,7 +93,7 @@ public class Elements {
 	public static final By deliveryTimetextbox2=By.xpath("//select[@id='delivery-time']");
 	public static final By dliveryTime=By.xpath("(//option[contains(text(),'7:00 PM')])[1]");
 	public static final By termsCheckbox=By.xpath("//input[@id='delivery-sms-disclaimer']");
-	public static final By asapOrder=By.xpath("(//option[contains(text(),'ASAP')] )[1]");
+	public static final By deliveryAsapOrder=By.xpath("(//option[contains(text(),'ASAP')] )[1]");
 	
 	//CarryOut Order
 	public static final By carryOutButton=By.xpath("//button[@id='order-type-carryout-btn']");
@@ -101,11 +102,31 @@ public class Elements {
 	public static final By pickupTimetextbox2=By.xpath("//select[@id='pickup-time']");
 	public static final By pickupTime=By.xpath("(//option[contains(text(),'7:00 PM')])[2]");
 	public static final By discount=By.xpath("//div[contains(text(),'Discounts')]");
+	public static final By placeOrderForPayLater = By.xpath("//button[@id='place-order']");
+	
+	//Curbside Order
+	public static final By curbsideButton=By.xpath("//button[@id='order-type-curbside-btn']");
+	public static final By pickupAsapOrder=By.xpath("(//option[contains(text(),'ASAP')] )[2]");
+	
+	
+	//Future Order date
+	public static final By pickupFutureDate=By.xpath("(//option[contains(text(),'Monday')])[1]");
+	
+	
+	//Payment Details
+	public static final By cardNumberTextBox = By.xpath("//*[@id='cvv']");
+	public static final By expirationYearTextBox = By.xpath("//select[@id='year-selector']");
+	public static final By expirationYear = By.xpath("//option[contains(text(),'2025')]");
+	public static final By nameOnCardTextBox=By.xpath("//input[@id='nameOnCard']");
+	public static final By zipcodeTextBox=By.xpath("//input[@id='zipcode']");
+	
+	
 	
 	
 	//Chili's Menu
 	public static final By appetizerButton=By.xpath("//a[@id='menu-category-name-appetizers']");
-	public static final By chipsandsalsaButton=By.xpath("//a[@id='menu-item-button-P101751']");
+	public static final By chipsandsalsaButton=By.xpath("//span[contains(text(),'Chips & Salsa')]");
+	public static final By tripleDipperButton=By.xpath("//span[contains(text(),'Triple Dipper')]");
 	public static final By addToOrder=By.xpath("//button[@id='item-add-to-order']");
 	public static final By addRewards=By.xpath("//input[@id='member-reward-1']");
 	

@@ -5,6 +5,7 @@ import java.util.Properties;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import Resources.Base;
 import Resources.FunctionalComponents;
@@ -13,8 +14,8 @@ public class TestOrderWithRewards extends Base {
 	
 	Properties property=new Properties();
 	
+	@Test
 	public void testOrderWithRewards() throws Exception{
-		
 		Logger log = LogManager.getLogger("Test Order With Rewards");
 		log.info("******STARTING TEST ORDER WITH REWARDS********");
 		FunctionalComponents aplyrwds = new FunctionalComponents(driver,log);
@@ -34,7 +35,7 @@ public class TestOrderWithRewards extends Base {
 		aplyrwds.clickOnAppetizer();
 		aplyrwds.clickOnChipsSalsa();
 		aplyrwds.addToOrder();
-		aplyrwds.clickViewCart();
+		aplyrwds.clickViewCartButton();
 		aplyrwds.changeQuantity();
 		aplyrwds.selectSilverWare();
 		aplyrwds.clickCheckOut();

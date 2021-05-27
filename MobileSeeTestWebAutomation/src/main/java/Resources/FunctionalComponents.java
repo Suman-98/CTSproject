@@ -618,6 +618,19 @@ public class FunctionalComponents extends Base {
 			tearDown();
 		}
 	}
+	
+	public void clickViewCartButton() {
+		try {
+			clickableWait(Elements.viewCartButton);
+			log.info("View Cart clicked");
+		} catch (Exception e) {
+			log.error("Failed to click View Cart");
+			log.error(e.getMessage());
+			listen.getErrorMessage(e.toString());
+			tearDown();
+		}
+		
+	}
 
 	public void selectSilverWare() throws InterruptedException {
 
@@ -683,6 +696,19 @@ public class FunctionalComponents extends Base {
 		
 	}
 	
+	public void clickOnTripleDipper() { 
+		try {
+			explicitWait(Elements.tripleDipperButton);
+			clickElement(Elements.tripleDipperButton);
+			log.info("Chips&Salsa menu button is clicked");
+		}catch (Exception e) {
+			log.error("Chips&Salsa menu button click failed");
+			log.error(e.getMessage());
+			listen.getErrorMessage(e.toString());
+			tearDown();
+		}
+	}
+	
 	public void addToOrder() {
 		
 		try {
@@ -740,6 +766,20 @@ public class FunctionalComponents extends Base {
 			listen.getErrorMessage(e.toString());
 			tearDown();
 		}
+	}
+	
+	public void selectPickupForFuture() {
+		try {
+			clickableWait(Elements.pickupTimetextbox1);
+			Thread.sleep(3000);
+			clickElement(Elements.pickupFutureDate);
+			log.info("Monday pickup time is selected");
+		} catch (Exception e) {
+			log.error("Failed to select Monday");
+			log.error(e.getMessage());
+			listen.getErrorMessage(e.toString());
+			tearDown();
+		}	
 	}
 	
 	public void selectPickupTime() {
@@ -816,11 +856,11 @@ public class FunctionalComponents extends Base {
 		}	
 	}
 	
-	public void selectDeliveryASAP () {
+	public void selectDeliveryASAP() {
 		try {
 			clickableWait(Elements.deliveryTimetextbox1);
 			Thread.sleep(3000);
-			clickElement(Elements.asapOrder);
+			clickElement(Elements.deliveryAsapOrder);
 			log.info("ASAP delivery time is selected");
 		} catch (Exception e) {
 			log.error("Failed to select delivery time ASAP");
@@ -890,6 +930,37 @@ public class FunctionalComponents extends Base {
 		
 	}
 	
+	//Curbside Order
+	
+	public void clickOnCurbSideButton() {
+		
+		try {
+			clickableWait(Elements.curbsideButton);
+			log.info("Curbside Button is Clicked");
+		} catch (Exception e) {
+			log.error("Curbside Button click failed");
+			log.error(e.getMessage());
+			listen.getErrorMessage(e.toString());
+			tearDown();
+		}
+		
+	}
+	
+	public void selectPickupAsap() {
+		try {
+			clickableWait(Elements.pickupTimetextbox1);
+			Thread.sleep(3000);
+			clickElement(Elements.pickupAsapOrder);
+			log.info("'ASAP' pickup time is selected");
+		} catch (Exception e) {
+			log.error("Failed to select pickup time 'ASAP'");
+			log.error(e.getMessage());
+			listen.getErrorMessage(e.toString());
+			tearDown();
+		}
+		
+	}
+	
 	
 	
 	/*******************************************************************************************************************************/
@@ -906,6 +977,20 @@ public class FunctionalComponents extends Base {
 			tearDown();
 		}
 	}
+	
+	//suman
+	public void enterCardNumber() {
+		try {
+			sendKeysWait(Elements.cardNumberTextBox, "4111-1111-1111-1111");
+			log.info("Visa card number is  entered");
+		} catch (Exception e) {
+			log.error("Failed to enter Visa card number");
+			log.error(e.getMessage());
+			listen.getErrorMessage(e.toString());
+			tearDown();
+		}
+		
+	}
 
 	public void enterCVV() {
 		try {
@@ -918,6 +1003,48 @@ public class FunctionalComponents extends Base {
 			tearDown();
 		}
 
+	}
+	
+	//suman
+	public void selectExpirationYear() {
+		try {
+			clickableWait(Elements.expirationYearTextBox);
+			Thread.sleep(3000);
+			clickElement(Elements.expirationYear);
+			log.info("Expiration Year is selected");
+		}catch (Exception e) {
+			log.error("Failed to select Expiration year");
+			log.error(e.getMessage());
+			listen.getErrorMessage(e.toString());
+			tearDown();
+		}
+		
+	}
+	
+	public void enterNameOnCard() {
+		try {
+			sendKeysWait(Elements.nameOnCardTextBox, "Test Test");
+			log.info("Name is  entered");
+		} catch (Exception e) {
+			log.error("Failed to enter Name");
+			log.error(e.getMessage());
+			listen.getErrorMessage(e.toString());
+			tearDown();
+		}
+		
+	}
+	
+	public void enterZipcode() {
+		try {
+			sendKeysWait(Elements.zipcodeTextBox, property.getProperty("zipcode"));
+			log.info("Zipcode is  entered");
+		} catch (Exception e) {
+			log.error("Failed to enter zipcode");
+			log.error(e.getMessage());
+			listen.getErrorMessage(e.toString());
+			tearDown();
+		}
+		
 	}
 
 	public void giveTip() {
@@ -955,6 +1082,18 @@ public class FunctionalComponents extends Base {
 
 		}
 	}
+	public void checkRoundOffAtResturent() {
+		try {
+			clickableWait(Elements.donationCheckBoxPayLater);
+			log.info("Donation checked");
+		} catch (Exception e) {
+			log.error("Failed to check donation check box");
+			log.error(e.getMessage());
+			listen.getErrorMessage(e.toString());
+
+		}
+		
+	}
 
 	public void placeOrder() {
 		try {
@@ -968,6 +1107,22 @@ public class FunctionalComponents extends Base {
 			tearDown();
 
 		}
+	}
+	
+	public void placeOrderForPayAtResturent() {
+		
+		try {
+			scrollDownFromStart("50");
+			clickableWait(Elements.placeOrderForPayLater);
+			log.info("Place order button clicked");
+		} catch (Exception e) {
+			log.error("Failed to click place order button");
+			log.error(e.getMessage());
+			listen.getErrorMessage(e.toString());
+			tearDown();
+
+		}
+		
 	}
 
 	public String getSuccessMessageforLoggedInOrder() {
