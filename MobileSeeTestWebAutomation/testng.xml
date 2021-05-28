@@ -7,7 +7,7 @@
   <test name="Test Delivery">
     <classes>
       <class name="TestScripts.TestMcaDeliveryLaterToday"/>
-      <class name="TestScripts.TestMcaDeliveryAsap"/>
+   
     </classes>
     </test>
 </suite> <!-- Suite -->

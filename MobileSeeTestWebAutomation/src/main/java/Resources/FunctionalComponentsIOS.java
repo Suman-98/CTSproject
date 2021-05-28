@@ -5,6 +5,7 @@ import java.util.Properties;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import com.aventstack.extentreports.ExtentReports;
@@ -467,6 +468,128 @@ public class FunctionalComponentsIOS extends BaseIOS {
 				tearDown();
 			}
 		}
+		
+		
+/*******************************************************************************suman***************************************************************/
+		//Delivery Order
+		
+		public void clickDeliveryButton () {
+			
+			try {
+				clickableWait(Elements.deliveryButton);
+				log.info("Delivery Button is Clicked");
+			} catch (Exception e) {
+				log.error("Delivery Button click failed");
+				log.error(e.getMessage());
+				listen.getErrorMessage(e.toString());
+				tearDown();
+			}
+		}
+		
+		
+		public void enterDeliveryLocation(String deliveryLocation) throws InterruptedException {
+			try {
+				clickableWait(Elements.deliveryLocation);
+				driver.getKeyboard().sendKeys(deliveryLocation);
+				log.info("Delivery location entered");
+			} catch (Exception e) {
+				log.error("Failed to enter Delivery location");
+				log.error(e.getMessage());
+				listen.getErrorMessage(e.toString());
+				tearDown();
+			}
+		}
+		
+		public void clickAptTextbox() {
+			try {
+				clickableWait(Elements.aptTextbox);
+				driver.getKeyboard().sendKeys("Test");
+				log.info(" Apt. Textbox is clicked");
+			} catch (Exception e) {
+				log.error("Failed to click Apt. Textbox");
+				log.error(e.getMessage());
+				listen.getErrorMessage(e.toString());
+				tearDown();
+			}	
+		}
+		
+		public void clickDeliveryInstrBox() {
+			try {
+				clickableWait(Elements.deliveryInstrTextbox);
+				driver.getKeyboard().sendKeys("Test");
+				log.info("Delivery Instruction Textbox is clicked");
+			} catch (Exception e) {
+				log.error("Failed to click Delivery Instruction Textbox");
+				log.error(e.getMessage());
+				listen.getErrorMessage(e.toString());
+				tearDown();
+			}	
+		}
+		
+		public void selectDeliveryASAP() {
+			try {
+				clickableWait(Elements.deliveryTimetextbox1);
+				Thread.sleep(3000);
+				clickElement(Elements.deliveryAsapOrder);
+				log.info("ASAP delivery time is selected");
+			} catch (Exception e) {
+				log.error("Failed to select delivery time ASAP");
+				log.error(e.getMessage());
+				listen.getErrorMessage(e.toString());
+				tearDown();
+			}
+		}
+		
+		public void selectDeliveryLaterToday() {
+			try {
+				clickableWait(Elements.deliveryTimetextbox1);
+				Thread.sleep(3000);
+				clickElement(Elements.LaterToday);
+				log.info("Later Today delivery time is selected");
+			} catch (Exception e) {
+				log.error("Failed to select delivery time Later Today");
+				log.error(e.getMessage());
+				listen.getErrorMessage(e.toString());
+				tearDown();
+			}
+		}
+		
+		public void selectDeliveryTime() {
+			try {
+				clickableWait(Elements.deliveryTimetextbox2);
+				Thread.sleep(3000);
+				clickElement(Elements.dliveryTime);
+				log.info("Delivery Time  is selected");
+			} catch (Exception e) {
+				log.error("Failed to select Delivery Time");
+				log.error(e.getMessage());
+				listen.getErrorMessage(e.toString());
+				tearDown();
+			}
+		}
+		
+		
+		
+		public void clickTermsCheckbox() {
+			
+			try {
+				WebElement checkbox=driver.findElement(Elements.termsCheckbox);
+				if(! checkbox.isSelected()) {
+					checkbox.click();
+					log.info("Terms Checkbox  is clicked");
+				}
+				log.info("Terms Checkbox  is already clicked");
+			} catch (Exception e) {
+				log.error("Terms Checkbox click failed");
+				log.error(e.getMessage());
+				listen.getErrorMessage(e.toString());
+				tearDown();
+			}
+			
+		}
+		
+		
+/*******************************************************************************************************************************************/		
 
 		public void continueToPayment() {
 			try {
