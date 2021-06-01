@@ -12,7 +12,7 @@ import Resources.FunctionalComponents;
 
 public class TestMcaCurbsideAsap extends Base{
 	
-	Properties property=new Properties();
+	 
 	@Test
 	public void testCurbsideAsapOrder() throws Exception{
 		
@@ -28,11 +28,12 @@ public class TestMcaCurbsideAsap extends Base{
 		curb.clickSignin();
 		curb.clickMenuButton();
 		curb.selectLocationsOption();
-		curb.enterRestaurantLocation( property.getProperty("location"));
+		curb.enterRestaurantLocation( prop.getProperty("location"));
 		curb.clickSearchButton();
 		curb.getRestaurantName();
 		curb.orderNow();
-		curb.clickOnTripleDipper();
+		curb.clickOnMenuCategory(2);
+		curb.clickOnMenuItem(3);
 		curb.addToOrder();
 		curb.clickViewCartButton();
 		curb.selectSilverWare();

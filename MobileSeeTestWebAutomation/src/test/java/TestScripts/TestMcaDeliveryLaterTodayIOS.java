@@ -20,7 +20,7 @@ Properties property=new Properties();
 	public void testMcaDeliveryLaterToday() throws Exception{
 		
 		Logger log = LogManager.getLogger("TestMcaDelivery-LaterToday");
-		log.info("******STARTING TEST MCA DELIVERY-LaterToday******");
+		log.info("******STARTING TEST MCA DELIVERY-LATER TODAY-FOR IOS DEVICES  F******");
 		FunctionalComponentsIOS deliverylt = new FunctionalComponentsIOS(driver,log);
 		deliverylt.validateQASite();
 		deliverylt.closePopupRewards();

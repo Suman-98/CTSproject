@@ -21,27 +21,45 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
 
-public class FunctionalComponents extends Base {
-
-	public AndroidDriver<AndroidElement> driver = null;
-	Properties property = returnProperty();
-	ExtentReports extent = ExtentReporterNG.getReportObject();
-	Listener listen;
-	ExtentTest test;
-	public WebDriverWait wait;
-	Logger log;
-
-	public FunctionalComponents(AndroidDriver<AndroidElement> driver, Logger log) {
-		this.driver = driver;
-		this.log = log;
-		wait = new WebDriverWait(this.driver, 15);
-		listen = new Listener();
-	}
-	public void incrementalScroll(By element)
+	public class FunctionalComponents extends Base {
+	
+		public AndroidDriver<AndroidElement> driver = null;
+		Properties property = returnProperty();
+		ExtentReports extent = ExtentReporterNG.getReportObject();
+		Listeners listen;
+		ExtentTest test;
+		public WebDriverWait wait;
+		Logger log;
+		ExcelUtils excel;
+		static ThreadLocal<ExtentTest> extTestObj;
+		
+		
+		public FunctionalComponents(AndroidDriver<AndroidElement> driver, Logger log) {
+			this.driver = driver;
+			this.log = log;
+			wait = new WebDriverWait(this.driver, 15);
+			listen = new Listeners();
+			
+			try {
+	            excel = new ExcelUtils("CommonData.xlsx");
+	        } catch (Exception e) {
+	            e.printStackTrace();
+	        }
+		}
+		
+	
+	public static void getExtentTest(ThreadLocal<ExtentTest> extentTest)
+		
+	    {
+	        extTestObj= extentTest;
+	    }
+	
+	public void incrementalScroll (By element)
 	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		Dimension initial_size = driver.manage().window().getSize();
@@ -63,7 +81,9 @@ public class FunctionalComponents extends Base {
 			i+=50;
 		}while(i<=height);
 		
-	}
+	}  
+
+
 
 	public void clickableWait(By element) {
 		wait.until(ExpectedConditions.elementToBeClickable(element)).click();
@@ -93,7 +113,7 @@ public class FunctionalComponents extends Base {
 		js.executeScript("window.scrollBy(0,-" + endpoint + ")", "");
 	}
 	
-	public void scrollIntoView (By element) {
+	public void scrollIntoView ( By element) {
 		WebElement ele = driver.findElement(element);
 		((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", ele);
 		
@@ -108,7 +128,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("QA site launch failed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 
 		}
@@ -123,7 +143,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Pop up close failed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 
@@ -136,7 +156,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Menu button click failed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 	}
@@ -148,7 +168,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Login option not selected");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 	}
@@ -160,7 +180,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Could not enter user name");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 
@@ -173,7 +193,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Could not enter password");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 
@@ -186,7 +206,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Sign in button click failed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 
@@ -199,7 +219,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.info("Logout button click failed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 	}
@@ -212,7 +232,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Login header not displayed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 
 		}
 		return driver.findElement(Elements.loginHeader).getText();
@@ -226,7 +246,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Location button selection failed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 	}
@@ -240,7 +260,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Failed to enter Restaurant location");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 	}
@@ -252,7 +272,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Search button click failed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 	}
@@ -264,7 +284,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Restaurant Name not displayed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 		}
 		return driver.findElement(Elements.restaurantName).getText();
 
@@ -279,7 +299,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Displayed rewards count couldn't be obtained");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 
 		}
 
@@ -294,7 +314,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Actual rewards count couldn't be obtained");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 		}
 		return count.size();
 
@@ -309,7 +329,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("My Account option selection failed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 
@@ -322,7 +342,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Email updation failed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 		}
 
 	}
@@ -334,7 +354,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Last Name updation failed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 
 		}
 
@@ -347,7 +367,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Consent check failed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 		}
 	}
 
@@ -358,7 +378,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Update button click failed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 	}
@@ -370,7 +390,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Success message not obtained");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 		}
 		return driver.findElement(Elements.successMessageforUpdate).getText();
 	}
@@ -383,7 +403,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Menu Option selection failed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 	}
@@ -400,7 +420,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Couldn't obtain chilis favourite items");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 		}
 
 	}
@@ -417,7 +437,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Add my visit button click failed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 	}
@@ -432,7 +452,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Failed to enter restaurant location");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 	}
@@ -447,7 +467,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Chillis location selection failed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 
@@ -463,7 +483,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Visit month selection failed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 
@@ -479,7 +499,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Visit day selection failed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 	}
@@ -494,7 +514,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Visit year selection failed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 	}
@@ -506,7 +526,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Failed to enter check number");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 		}
 
 	}
@@ -518,7 +538,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Failed to enter check total");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 		}
 	}
 
@@ -529,7 +549,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Failed to submit visit");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 	}
@@ -541,7 +561,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Success message for add my visit not displayed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 		}
 		return driver.findElement(Elements.getSuccessMessageforAddMyVisit).getText();
 
@@ -558,7 +578,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Failed to enter Restaurant location");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 
@@ -572,7 +592,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Search button click failed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 	}
@@ -581,6 +601,7 @@ public class FunctionalComponents extends Base {
 		try {
 			Thread.sleep(3000);
 		    incrementalScroll(Elements.orderNowButton);
+		 
 			Thread.sleep(3000);
 			clickElement(Elements.orderNowButton);
 			log.info("Site scrolled and order button clicked");
@@ -588,7 +609,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Site scrolled but order button not clicked");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 
@@ -601,7 +622,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Failed to select chilis favourite item");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 	}
@@ -614,19 +635,28 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Failed to click View Cart");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 	}
 	
+	//suman
 	public void clickViewCartButton() {
 		try {
+			WebElement viewCart=driver.findElement(Elements.viewCartButton);
+			if(! viewCart.isDisplayed()) {
+				clickElement(Elements.cartIcon);
+				log.info("Cart-Icon is clicked");
+				extTestObj.get().log(Status.PASS, "Cart-Icon is clicked");
+			}
+			log.info("View cart is already displayed");
 			clickableWait(Elements.viewCartButton);
-			log.info("View Cart clicked");
+			log.info("View Cart button is clicked");
+			extTestObj.get().log(Status.PASS, "View Cart button is clicked");
 		} catch (Exception e) {
 			log.error("Failed to click View Cart");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 		
@@ -643,7 +673,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Silver ware opt in failed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 
 		}
@@ -658,7 +688,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Order check out failed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 	}
@@ -667,47 +697,48 @@ public class FunctionalComponents extends Base {
 	
 	//chili's Menu
 	
-	public void clickOnAppetizer() {
+	public void clickOnMenuCategory(int rowNum) {
+		
+		String menuCategory = excel.getCellData("OrderMenu","MenuCategory", rowNum).toLowerCase();
+		
+		By menuCategoryName=By.xpath("//a[contains(@id,'name-"+ menuCategory+ "')]");
+		
 		
 		try {
-			scrollIntoView(Elements.appetizerButton);
-			clickableWait(Elements.appetizerButton);
-			log.info("Appetizer Menu button is clicked");
+			scrollIntoView(menuCategoryName);
+			clickableWait(menuCategoryName);
+			log.info(menuCategory +" button is clicked");
+			extTestObj.get().log(Status.PASS, menuCategory +" button is clicked");
 		}catch (Exception e) {
-			log.error("Appetizer Menu button click failed");
+			log.error(menuCategory+ " button click failed");
+			extTestObj.get().log(Status.FAIL, menuCategory+ " button click failed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 	}
 	
-	public void clickOnChipsSalsa() {
+	public void clickOnMenuItem(int rowNum) {   
+		
+		String menuItem=excel.getCellData("OrderMenu", "MenuItem", rowNum).toLowerCase();
+		
+		By menuItemName=By.xpath("//span[contains(text(),'" + menuItem +"')]");
 		
 		try {
-			scrollIntoView(Elements.chipsandsalsaButton);
-			clickableWait(Elements.chipsandsalsaButton);
-			log.info("Chips&Salsa menu button is clicked");
+			scrollIntoView(menuItemName);
+			clickableWait(menuItemName);
+			log.info( menuItem+ " button is clicked");
+			extTestObj.get().log(Status.PASS,menuItem+ " button is clicked");
 		}catch (Exception e) {
-			log.error("Chips&Salsa menu button click failed");
+			log.error(menuItem+ " button click failed");
+			extTestObj.get().log(Status.FAIL,menuItem+ " button click failed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 		
 	}
 	
-	public void clickOnTripleDipper() { 
-		try {
-			explicitWait(Elements.tripleDipperButton);
-			clickElement(Elements.tripleDipperButton);
-			log.info("Chips&Salsa menu button is clicked");
-		}catch (Exception e) {
-			log.error("Chips&Salsa menu button click failed");
-			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
-			tearDown();
-		}
-	}
 	
 	public void addToOrder() {
 		
@@ -715,10 +746,11 @@ public class FunctionalComponents extends Base {
 			explicitWait(Elements.addToOrder);
 			clickElement(Elements.addToOrder);
 			log.info("AddToOrder button is clicked");
+		    extTestObj.get().log(Status.PASS,"AddToOrder button is clicked");
 		}catch (Exception e) {
 			log.error("AddToOrder button click failed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 	}
@@ -729,10 +761,11 @@ public class FunctionalComponents extends Base {
 		try {
 			clickableWait(Elements.addRewards);
 			log.info("Adding Rewards is sucesses");
+			extTestObj.get().log(Status.PASS,"Adding Rewards is sucesses");
 		}catch (Exception e) {
 			log.error("Adding Reward is failed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 	}
@@ -745,10 +778,11 @@ public class FunctionalComponents extends Base {
 		try {
 			explicitWait(Elements.carryOutButton);
 			log.info("Carryout Button is Clicked");
+			extTestObj.get().log(Status.PASS,"Carryout Button is Clicked");
 		}catch (Exception e) {
 			log.error("Carryout Button click failed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 		
@@ -760,10 +794,11 @@ public class FunctionalComponents extends Base {
 			Thread.sleep(3000);
 			clickElement(Elements.pickupLaterToday);
 			log.info("Later Today pickup time is selected");
+			extTestObj.get().log(Status.PASS,"Later Today pickup time is selected");
 		} catch (Exception e) {
 			log.error("Failed to select Later Today");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 	}
@@ -774,10 +809,11 @@ public class FunctionalComponents extends Base {
 			Thread.sleep(3000);
 			clickElement(Elements.pickupFutureDate);
 			log.info("Monday pickup time is selected");
+			extTestObj.get().log(Status.PASS,"Monday pickup time is selected");
 		} catch (Exception e) {
 			log.error("Failed to select Monday");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}	
 	}
@@ -788,10 +824,11 @@ public class FunctionalComponents extends Base {
 			Thread.sleep(3000);
 			clickElement(Elements.pickupTime);
 			log.info("Pickup time is selected");
+			extTestObj.get().log(Status.PASS,"Pickup time is selected");
 		} catch (Exception e) {
 			log.error("Failed to select pickup time");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 	}
@@ -807,10 +844,11 @@ public class FunctionalComponents extends Base {
 		try {
 			clickableWait(Elements.deliveryButton);
 			log.info("Delivery Button is Clicked");
+			extTestObj.get().log(Status.PASS,"Delivery Button is Clicked");
 		} catch (Exception e) {
 			log.error("Delivery Button click failed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 	}
@@ -821,10 +859,11 @@ public class FunctionalComponents extends Base {
 			clickableWait(Elements.deliveryLocation);
 			driver.getKeyboard().sendKeys(deliveryLocation);
 			log.info("Delivery location entered");
+			extTestObj.get().log(Status.PASS,"Delivery location entered");
 		} catch (Exception e) {
 			log.error("Failed to enter Delivery location");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 	}
@@ -835,10 +874,11 @@ public class FunctionalComponents extends Base {
 			clickableWait(Elements.aptTextbox);
 			driver.getKeyboard().sendKeys("Test");
 			log.info(" Apt. Textbox is clicked");
+			extTestObj.get().log(Status.PASS," Apt. Textbox is clicked");
 		} catch (Exception e) {
 			log.error("Failed to click Apt. Textbox");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}	
 	}
@@ -848,10 +888,11 @@ public class FunctionalComponents extends Base {
 			clickableWait(Elements.deliveryInstrTextbox);
 			driver.getKeyboard().sendKeys("Test");
 			log.info("Delivery Instruction Textbox is clicked");
+			extTestObj.get().log(Status.PASS,"Delivery Instruction Textbox is clicked");
 		} catch (Exception e) {
 			log.error("Failed to click Delivery Instruction Textbox");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}	
 	}
@@ -862,10 +903,11 @@ public class FunctionalComponents extends Base {
 			Thread.sleep(3000);
 			clickElement(Elements.deliveryAsapOrder);
 			log.info("ASAP delivery time is selected");
+			extTestObj.get().log(Status.PASS,"ASAP delivery time is selected");
 		} catch (Exception e) {
 			log.error("Failed to select delivery time ASAP");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 	}
@@ -876,10 +918,11 @@ public class FunctionalComponents extends Base {
 			Thread.sleep(3000);
 			clickElement(Elements.LaterToday);
 			log.info("Later Today delivery time is selected");
+			extTestObj.get().log(Status.PASS,"Later Today delivery time is selected");
 		} catch (Exception e) {
 			log.error("Failed to select delivery time Later Today");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 	}
@@ -890,10 +933,11 @@ public class FunctionalComponents extends Base {
 			Thread.sleep(3000);
 			clickElement(Elements.dliveryTime);
 			log.info("Delivery Time  is selected");
+			extTestObj.get().log(Status.PASS,"Delivery Time  is selected");
 		} catch (Exception e) {
 			log.error("Failed to select Delivery Time");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 	}
@@ -909,10 +953,11 @@ public class FunctionalComponents extends Base {
 				log.info("Terms Checkbox  is clicked");
 			}
 			log.info("Terms Checkbox  is already clicked");
+			extTestObj.get().log(Status.PASS,"Terms Checkbox  is already clicked");
 		} catch (Exception e) {
 			log.error("Terms Checkbox click failed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 		
@@ -924,10 +969,11 @@ public class FunctionalComponents extends Base {
 		try {
 			driver.findElement(Elements.discount).isDisplayed();
 			log.info("Discount is applied");
+			extTestObj.get().log(Status.PASS,"Discount is applied");
 		} catch (Exception e) {
 			log.error("Applying discount is failed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 		
@@ -941,10 +987,11 @@ public class FunctionalComponents extends Base {
 		try {
 			clickableWait(Elements.curbsideButton);
 			log.info("Curbside Button is Clicked");
+			extTestObj.get().log(Status.PASS,"Curbside Button is Clicked");
 		} catch (Exception e) {
 			log.error("Curbside Button click failed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 		
@@ -956,10 +1003,11 @@ public class FunctionalComponents extends Base {
 			Thread.sleep(3000);
 			clickElement(Elements.pickupAsapOrder);
 			log.info("'ASAP' pickup time is selected");
+			extTestObj.get().log(Status.PASS,"Curbside Button is Clicked");
 		} catch (Exception e) {
 			log.error("Failed to select pickup time 'ASAP'");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 		
@@ -977,33 +1025,40 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Failed to click Payment button");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 	}
 	
 	//suman
 	public void enterCardNumber() {
+		
+		String cardNumber=excel.getCellData("PaymentDetails", "card-number", 2);
+		
 		try {
-			sendKeysWait(Elements.cardNumberTextBox, "4111-1111-1111-1111");
+			sendKeysWait(Elements.cardNumberTextBox, cardNumber);
 			log.info("Visa card number is  entered");
+			extTestObj.get().log(Status.PASS,"Curbside Button is Clicked");
 		} catch (Exception e) {
 			log.error("Failed to enter Visa card number");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 		
 	}
 
 	public void enterCVV() {
+		
+		String cvvNumber=excel.getCellData("PaymentDetails", "cvv", 2);
+		
 		try {
-			sendKeysWait(Elements.cvvTextBox, "145");
+			sendKeysWait(Elements.cvvTextBox, cvvNumber);
 			log.info("CVV entered");
 		} catch (Exception e) {
 			log.error("Failed to enter CVV");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 
@@ -1016,36 +1071,47 @@ public class FunctionalComponents extends Base {
 			Thread.sleep(3000);
 			clickElement(Elements.expirationYear);
 			log.info("Expiration Year is selected");
+			extTestObj.get().log(Status.PASS,"Expiration Year is selected");
 		}catch (Exception e) {
 			log.error("Failed to select Expiration year");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 		
 	}
 	
+	//suman
 	public void enterNameOnCard() {
+		
+		String cardName=excel.getCellData("PaymentDetails", "card-name", 2);
+		
 		try {
-			sendKeysWait(Elements.nameOnCardTextBox, "Test Test");
+			sendKeysWait(Elements.nameOnCardTextBox, cardName);
 			log.info("Name is  entered");
+			extTestObj.get().log(Status.PASS,"Name is  entered");
 		} catch (Exception e) {
 			log.error("Failed to enter Name");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 		
 	}
 	
+	//suman
 	public void enterZipcode() {
+		
+		String zipCode=excel.getCellData("PaymentDetails", "zipcode", 2);
+		
 		try {
 			sendKeysWait(Elements.zipcodeTextBox, property.getProperty("zipcode"));
 			log.info("Zipcode is  entered");
+			extTestObj.get().log(Status.PASS,"Zipcode is  entered");
 		} catch (Exception e) {
 			log.error("Failed to enter zipcode");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 		
@@ -1053,12 +1119,13 @@ public class FunctionalComponents extends Base {
 
 	public void giveTip() {
 		try {
+			
 			sendKeysWait(Elements.tipTextBox, "15");
 			log.info("Tip given");
 		} catch (Exception e) {
 			log.error("Failed to enter tip");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 		}
 	}
 
@@ -1069,7 +1136,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Pick up cost not displayed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 
 		}
 		return driver.findElement(Elements.pickUpCost).getText();
@@ -1082,10 +1149,12 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Failed to check donation check box");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 
 		}
 	}
+	
+	//suman
 	public void checkRoundOffAtResturent() {
 		try {
 			clickableWait(Elements.donationCheckBoxPayLater);
@@ -1093,7 +1162,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Failed to check donation check box");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 
 		}
 		
@@ -1107,12 +1176,13 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Failed to click place order button");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 
 		}
 	}
 	
+	//suman
 	public void placeOrderForPayAtResturent() {
 		
 		try {
@@ -1122,7 +1192,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Failed to click place order button");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 
 		}
@@ -1137,7 +1207,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Sucess message not displayed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 		return driver.findElement(Elements.successMessageforLoggedInOrder).getText();
@@ -1151,7 +1221,7 @@ public class FunctionalComponents extends Base {
 		} catch (Exception e) {
 			log.error("Order price not displayed");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 		return driver.findElement(Elements.orderPrice).getText();
@@ -1171,7 +1241,7 @@ public class FunctionalComponents extends Base {
 	   {
 		   log.error("Failed to select reorder option");
 		   log.error(e.getMessage());
-		   listen.getErrorMessage(e.toString());
+		   extTestObj.get().log(Status.ERROR,e.toString());
 		   tearDown();
 	   }
 	}
@@ -1189,10 +1259,11 @@ public class FunctionalComponents extends Base {
 		{
 			log.error("Failed to click reorder");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 	}
+	
 	public void changeQuantity()
 	{
 		try
@@ -1207,7 +1278,7 @@ public class FunctionalComponents extends Base {
 		{
 			log.error("Failed to select and change quantity");
 			log.error(e.getMessage());
-			listen.getErrorMessage(e.toString());
+			extTestObj.get().log(Status.ERROR,e.toString());
 			tearDown();
 		}
 	}

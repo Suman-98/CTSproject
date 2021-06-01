@@ -1,0 +1,17 @@
+09:45:41.810 [main] INFO  TestMcaDelivery-LaterToday - ******STARTING TEST MCA DELIVERY-LaterToday******
+09:45:42.600 [main] INFO  TestMcaDelivery-LaterToday - Starting QA site validation
+09:45:45.538 [main] INFO  TestMcaDelivery-LaterToday - QA site launch is successful
+09:46:01.018 [main] INFO  TestMcaDelivery-LaterToday - Pop up closed
+09:46:17.168 [main] INFO  TestMcaDelivery-LaterToday - Menu button clicked
+09:46:34.023 [main] INFO  TestMcaDelivery-LaterToday - Login option selected
+09:46:59.948 [main] INFO  TestMcaDelivery-LaterToday - User name entered
+09:47:25.747 [main] INFO  TestMcaDelivery-LaterToday - Password entered
+09:47:39.391 [main] INFO  TestMcaDelivery-LaterToday - Sign in button clicked
+09:48:01.264 [main] INFO  TestMcaDelivery-LaterToday - Menu button clicked
+09:48:16.887 [main] INFO  TestMcaDelivery-LaterToday - Location option selected
+09:48:37.346 [main] INFO  TestMcaDelivery-LaterToday - Restaurant location entered
+09:48:52.926 [main] INFO  TestMcaDelivery-LaterToday - Search button clicked
+09:49:01.384 [main] INFO  TestMcaDelivery-LaterToday - Restaurant name is displayed
+09:58:08.130 [main] INFO  TestMcaDelivery-LaterToday - Site scrolled and order button clicked
+09:58:33.161 [main] ERROR TestMcaDelivery-LaterToday - Failed to select chilis favourite item
+09:58:33.161 [main] ERROR TestMcaDelivery-LaterToday - Expected condition failed: waiting for element to be clickable: By.xpath: //*[@id='P102596-0'] (tried for 15 second(s) with 500 milliseconds interval)

@@ -18,7 +18,7 @@ public class Elements {
 
 	//Location Search
 	public static final By locationsButton = By.xpath("//*[@id='header-locations']");
-	public static final By locationSearchTextBox = By.xpath("");
+	public static final By locationSearchTextBox = By.xpath("//*[@id='location-search']");
 	public static final By searchButton = By.xpath("//*[@id='button-location-query']/span");
 	public static final By restaurantName = By.xpath("//*[@class='location-summary']/preceding-sibling::h1");
 	

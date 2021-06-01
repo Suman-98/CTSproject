@@ -12,7 +12,7 @@ import Resources.FunctionalComponents;
 
 public class TestMcaCarryoutFuture extends Base{
 	
-	Properties property=new Properties();
+	 
 	@Test
 	public void testCarryoutFutureOrder() throws Exception {
 		
@@ -28,7 +28,7 @@ public class TestMcaCarryoutFuture extends Base{
 		cfo.clickSignin();
 		cfo.clickMenuButton();
 		cfo.selectLocationsOption();
-		cfo.enterRestaurantLocation( property.getProperty("location"));
+		cfo.enterRestaurantLocation( prop.getProperty("location"));
 		cfo.clickSearchButton();
 		cfo.getRestaurantName();
 		cfo.orderNow();

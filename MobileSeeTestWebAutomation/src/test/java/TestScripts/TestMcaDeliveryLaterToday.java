@@ -12,7 +12,6 @@ import Resources.FunctionalComponents;
 
 public class TestMcaDeliveryLaterToday extends Base{
 	
-	Properties property=new Properties();
 	
 	@Test
 	public void testMcaDeliveryLaterToday() throws Exception{
@@ -29,7 +28,7 @@ public class TestMcaDeliveryLaterToday extends Base{
 		deliverylt.clickSignin();
 		deliverylt.clickMenuButton();
 		deliverylt.selectLocationsOption();
-		deliverylt.enterRestaurantLocation( property.getProperty("location"));
+		deliverylt.enterRestaurantLocation( prop.getProperty("location"));
 		deliverylt.clickSearchButton();
 		deliverylt.getRestaurantName();
 		deliverylt.orderNow();
@@ -38,7 +37,7 @@ public class TestMcaDeliveryLaterToday extends Base{
 		deliverylt.selectSilverWare();
 		deliverylt.clickCheckOut();
 		deliverylt.clickDeliveryButton();
-		deliverylt.enterDeliveryLocation(property.getProperty("deliveryLocation"));
+		deliverylt.enterDeliveryLocation(prop.getProperty("deliveryLocation"));
 		deliverylt.clickAptTextbox();
 		deliverylt.clickDeliveryInstrBox();
 		deliverylt.selectDeliveryLaterToday();

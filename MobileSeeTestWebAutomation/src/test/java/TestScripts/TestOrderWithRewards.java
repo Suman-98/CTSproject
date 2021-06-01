@@ -32,8 +32,8 @@ public class TestOrderWithRewards extends Base {
 		aplyrwds.clickSearchButton();
 		aplyrwds.getRestaurantName();
 		aplyrwds.orderNow();
-		aplyrwds.clickOnAppetizer();
-		aplyrwds.clickOnChipsSalsa();
+		aplyrwds.clickOnMenuCategory(2);
+		aplyrwds.clickOnMenuItem(2);
 		aplyrwds.addToOrder();
 		aplyrwds.clickViewCartButton();
 		aplyrwds.changeQuantity();

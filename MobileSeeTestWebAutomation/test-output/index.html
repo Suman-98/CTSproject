@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>C:\Users\713859\eclipse-workspace\MobileSeeTestWebAutomation\testng.xml</span>
+                    <span>C:\Users\suman\eclipse-workspace\MobileSeeTestWebAutomation\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestScripts.TestLoggedInOrder" hash-for-method="testLoggedInOrderFeature">testLoggedInOrderFeature</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestScripts.TestMcaDeliveryLaterToday" hash-for-method="testMcaDeliveryLaterToday">testMcaDeliveryLaterToday</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -120,18 +120,18 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">TestScripts.TestLoggedInOrder</span>
+              <span class="class-name">TestScripts.TestMcaDeliveryLaterToday</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testLoggedInOrderFeature">
-                  </a> <!-- testLoggedInOrderFeature -->
-                  <span class="method-name">testLoggedInOrderFeature</span>
+                  <a name="testMcaDeliveryLaterToday">
+                  </a> <!-- testMcaDeliveryLaterToday -->
+                  <span class="method-name">testMcaDeliveryLaterToday</span>
                   <div class="stack-trace">java.lang.NullPointerException
 	at Resources.Base.tearDown(Base.java:65)
-	at Resources.FunctionalComponents.AddChilisFavouriteToCart(FunctionalComponents.java:594)
-	at TestScripts.TestLoggedInOrder.testLoggedInOrderFeature(TestLoggedInOrder.java:36)
+	at Resources.FunctionalComponents.AddChilisFavouriteToCart(FunctionalComponents.java:626)
+	at TestScripts.TestMcaDeliveryLaterToday.testMcaDeliveryLaterToday(TestMcaDeliveryLaterToday.java:35)
 ... Removed 25 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -141,7 +141,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\713859\eclipse-workspace\MobileSeeTestWebAutomation\testng.xml</span>
+            <span class="header-content">C:\Users\suman\eclipse-workspace\MobileSeeTestWebAutomation\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -149,13 +149,13 @@
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
   &lt;listeners&gt;
-    &lt;listener class-name=&quot;Resources.Listener&quot;/&gt;
+    &lt;listener class-name=&quot;Resources.Listeners&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test name=&quot;Test Login Logout&quot;&gt;
+  &lt;test name=&quot;Test Delivery&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;TestScripts.TestLoggedInOrder&quot;/&gt;
+      &lt;class name=&quot;TestScripts.TestMcaDeliveryLaterToday&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test Login Logout --&gt;
+  &lt;/test&gt; &lt;!-- Test Delivery --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -167,7 +167,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test Login Logout (1 class)</span>
+                <span class="test-name">Test Delivery (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -195,14 +195,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testLoggedInOrderFeature')
-data.setCell(0, 2, 'TestScripts.TestLoggedInOrder')
-data.setCell(0, 3, 375572);
+data.setCell(0, 1, 'testMcaDeliveryLaterToday')
+data.setCell(0, 2, 'TestScripts.TestMcaDeliveryLaterToday')
+data.setCell(0, 3, 771983);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 minutes</span>
+              <span class="suite-total-time">Total running time: 12 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -228,7 +228,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">TestScripts.TestLoggedInOrder</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">TestScripts.TestMcaDeliveryLaterToday</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">initialize</span>
                 <span class="method-start">0 ms</span>
@@ -236,12 +236,12 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">testLoggedInOrderFeature</span>
-                <span class="method-start">51928 ms</span>
+                <span class="method-name">testMcaDeliveryLaterToday</span>
+                <span class="method-start">66070 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">427544 ms</span>
+                <span class="method-start">838058 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
